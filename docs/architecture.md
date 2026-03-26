@@ -23,11 +23,11 @@
 ┌─────────────────────────────────────────────────────────┐
 │                   文件系统（数据层）                        │
 │                                                         │
-│  data/search-results/   检索和筛选结果                     │
-│  data/papers/           原始 PDF 存档                     │
-│  data/papers-md/        marker-pdf 转出的 Markdown         │
-│  data/notes/            每篇论文的结构化笔记                 │
-│  outputs/               最终综述报告                       │
+│  data/queries/<query-slug>/search-results/   检索和筛选结果        │
+│  data/queries/<query-slug>/papers/           原始 PDF 存档        │
+│  data/queries/<query-slug>/papers-md/        marker-pdf 转出的 Markdown │
+│  data/queries/<query-slug>/notes/            每篇论文的结构化笔记      │
+│  data/queries/<query-slug>/outputs/          该查询的最终综述报告      │
 └────▲────────────────────────────────────────────────────┘
      │
      │ search_papers / download_paper / convert_pdf
@@ -61,23 +61,23 @@
     │
     ▼
 search-agent
-    ├─ 调用 MCP:search_papers(keywords) ──→ data/search-results/raw.json
-    ├─ LLM 评分筛选 ──→ data/search-results/filtered.md
-    ├─ 调用 MCP:download_paper(×N) ──→ data/papers/*.pdf
-    ├─ 调用 MCP:convert_pdf(×N) ──→ data/papers-md/*.md
-    └─ 生成状态报告 ──→ data/search-results/fetch-status.md
+    ├─ 调用 MCP:search_papers(keywords) ──→ data/queries/<query-slug>/search-results/raw.json
+    ├─ LLM 评分筛选 ──→ data/queries/<query-slug>/search-results/filtered.md
+    ├─ 调用 MCP:download_paper(×N) ──→ data/queries/<query-slug>/papers/*.pdf
+    ├─ 调用 MCP:convert_pdf(×N) ──→ data/queries/<query-slug>/papers-md/*.md
+    └─ 生成状态报告 ──→ data/queries/<query-slug>/search-results/fetch-status.md
     │
     ▼ 用户确认
     │
 literature-reviewer
-    ├─ 读取 data/papers-md/*.md
-    └─ 生成笔记 ──→ data/notes/*.md
+    ├─ 读取 data/queries/<query-slug>/papers-md/*.md
+    └─ 生成笔记 ──→ data/queries/<query-slug>/notes/*.md
     │
     ▼ 用户确认
     │
 synthesis-agent
-    ├─ 读取 data/notes/*.md
-    └─ 生成综述 ──→ outputs/review-overview.md
+    ├─ 读取 data/queries/<query-slug>/notes/*.md
+    └─ 生成综述 ──→ data/queries/<query-slug>/outputs/review-overview.md
 ```
 
 ## 目录结构
@@ -98,11 +98,13 @@ literature-review-agent/
 │   ├── prds/                      # 产品需求文档
 │   └── epics/                     # Epic 和 Task 文件
 ├── data/
-│   ├── search-results/            # 检索和筛选结果
-│   ├── papers/                    # 原始 PDF 存档（不删除）
-│   ├── papers-md/                 # marker-pdf 转出的 Markdown
-│   └── notes/                     # 每篇论文的结构化笔记
-├── outputs/                       # 最终综述报告
+│   └── queries/
+│       └── <query-slug>/
+│           ├── search-results/     # 当前 query 的检索和筛选结果
+│           ├── papers/             # 当前 query 的原始 PDF 存档
+│           ├── papers-md/          # 当前 query 的 marker-pdf 输出
+│           ├── notes/              # 当前 query 的结构化笔记
+│           └── outputs/            # 当前 query 的最终综述
 └── docs/
     ├── architecture.md            # 本文件
     └── implementation-log.md      # 实现过程记录

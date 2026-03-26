@@ -1,0 +1,580 @@
+{
+  "query": "efficient LLM fine-tuning LoRA quantization",
+  "sources": [
+    "semantic_scholar",
+    "arxiv"
+  ],
+  "total_before_dedup": 29,
+  "total_after_dedup": 29,
+  "errors": [
+    "Semantic Scholar: rate limited after all retries"
+  ],
+  "papers": [
+    {
+      "id": "2501.19389",
+      "title": "Federated Sketching LoRA: A Flexible Framework for Heterogeneous Collaborative Fine-Tuning of LLMs",
+      "authors": [
+        "Wenzhi Fang",
+        "Dong-Jun Han",
+        "Liangqi Yuan",
+        "Seyyedali Hosseinalipour",
+        "Christopher G. Brinton"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Fine-tuning large language models (LLMs) on resource-constrained clients remains a challenging problem. Recent works have fused low-rank adaptation (LoRA) techniques with federated fine-tuning to mitigate challenges associated with client model sizes and data scarcity. Still, the heterogeneity of resources remains a critical bottleneck: while higher-rank modules generally enhance performance, varying client capabilities constrain LoRA's feasible rank range. Existing approaches attempting to resolve this issue either lack analytical justification or impose additional computational overhead, leaving a wide gap for efficient and theoretically-grounded solutions. To address these challenges, we propose federated sketching LoRA (FSLoRA), which leverages a sketching mechanism to enable clients to selectively update submatrices of global LoRA modules maintained by the server. By adjusting the sketching ratios, which determine the ranks of the submatrices on the clients, FSLoRA flexibly adapts to client-specific communication and computational constraints. We provide a rigorous convergence analysis of FSLoRA that characterizes how the sketching ratios affect the convergence rate. Through comprehensive experiments on multiple datasets and LLM models, we demonstrate FSLoRA's performance improvements compared to various baselines.",
+      "url": "http://arxiv.org/abs/2501.19389v3",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2501.19389v3",
+      "doi": "",
+      "arxiv_id": "2501.19389"
+    },
+    {
+      "id": "2504.15610",
+      "title": "A LoRA-Based Approach to Fine-Tuning LLMs for Educational Guidance in Resource-Constrained Settings",
+      "authors": [
+        "Md Millat Hosen"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "The current study describes a cost-effective method for adapting large language models (LLMs) for academic advising with study-abroad contexts in mind and for application in low-resource methods for acculturation. With the Mistral-7B-Instruct model applied with a Low-Rank Adaptation (LoRA) method and a 4-bit quantization method, the model underwent training in two distinct stages related to this study's purpose to enhance domain specificity while maintaining computational efficiency. In Phase 1, the model was conditioned with a synthetic dataset via the Gemini Pro API, and in Phase 2, it was trained with manually curated datasets from the StudyAbroadGPT project to achieve enhanced, contextualized responses. Technical innovations entailed memory-efficient quantization, parameter-efficient adaptation, and continuous training analytics via Weights &amp; Biases. After training, this study demonstrated a reduction in training loss by 52.7%, 92% accuracy in domain-specific recommendations, achieved 95% markdown-based formatting support, and a median run-rate of 100 samples per second on off-the-shelf GPU equipment. These findings support the effective application of instruction-tuned LLMs within educational advisers, especially in low-resource institutional scenarios. Limitations included decreased generalizability and the application of a synthetically generated dataset, but this framework is scalable for adding new multilingual-augmented and real-time academic advising processes. Future directions may include plans for the integration of retrieval-augmented generation, applying dynamic quantization routines, and connecting to real-time academic databases to increase adaptability and accuracy.",
+      "url": "http://arxiv.org/abs/2504.15610v3",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2504.15610v3",
+      "doi": "",
+      "arxiv_id": "2504.15610"
+    },
+    {
+      "id": "2411.14961",
+      "title": "LoRA-FAIR: Federated LoRA Fine-Tuning with Aggregation and Initialization Refinement",
+      "authors": [
+        "Jieming Bian",
+        "Lei Wang",
+        "Letian Zhang",
+        "Jie Xu"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Foundation models (FMs) achieve strong performance across diverse tasks with task-specific fine-tuning, yet full parameter fine-tuning is often computationally prohibitive for large models. Parameter-efficient fine-tuning (PEFT) methods like Low-Rank Adaptation (LoRA) reduce this cost by introducing low-rank matrices for tuning fewer parameters. While LoRA allows for efficient fine-tuning, it requires significant data for adaptation, making Federated Learning (FL) an appealing solution due to its privacy-preserving collaborative framework. However, combining LoRA with FL introduces two key challenges: the \\textbf{Server-Side Aggregation Bias}, where server-side averaging of LoRA matrices diverges from the ideal global update, and the \\textbf{Client-Side Initialization Lag}, emphasizing the need for consistent initialization across rounds. Existing approaches address these challenges individually, limiting their effectiveness. We propose LoRA-FAIR, a novel method that tackles both issues by introducing a correction term on the server, enhancing aggregation efficiency and accuracy. LoRA-FAIR maintains computational and communication efficiency, yielding superior performance over state-of-the-art methods. Experimental results on ViT and MLP-Mixer models across large-scale datasets demonstrate that LoRA-FAIR consistently achieves performance improvements in FL settings.",
+      "url": "http://arxiv.org/abs/2411.14961v3",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2411.14961v3",
+      "doi": "",
+      "arxiv_id": "2411.14961"
+    },
+    {
+      "id": "2410.16954",
+      "title": "LoRA-C: Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices",
+      "authors": [
+        "Chuntao Ding",
+        "Xu Cao",
+        "Jianhang Xie",
+        "Linlin Fan",
+        "Shangguang Wang",
+        "Zhichao Lu"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Efficient fine-tuning of pre-trained convolutional neural network (CNN) models using local data is essential for providing high-quality services to users using ubiquitous and resource-limited Internet of Things (IoT) devices. Low-Rank Adaptation (LoRA) fine-tuning has attracted widespread attention from industry and academia because it is simple, efficient, and does not incur any additional reasoning burden. However, most of the existing advanced methods use LoRA to fine-tune Transformer, and there are few studies on using LoRA to fine-tune CNN. The CNN model is widely deployed on IoT devices for application due to its advantages in comprehensive resource occupancy and performance. Moreover, IoT devices are widely deployed outdoors and usually process data affected by the environment (such as fog, snow, rain, etc.). The goal of this paper is to use LoRA technology to efficiently improve the robustness of the CNN model. To this end, this paper first proposes a strong, robust CNN fine-tuning method for IoT devices, LoRA-C, which performs low-rank decomposition in convolutional layers rather than kernel units to reduce the number of fine-tuning parameters. Then, this paper analyzes two different rank settings in detail and observes that the best performance is usually achieved when $α/{r}$ is a constant in either standard data or corrupted data. This discovery provides experience for the widespread application of LoRA-C. Finally, this paper conducts many experiments based on pre-trained models. Experimental results on CIFAR-10, CIFAR-100, CIFAR-10-C, and Icons50 datasets show that the proposed LoRA-Cs outperforms standard ResNets. Specifically, on the CIFAR-10-C dataset, the accuracy of LoRA-C-ResNet-101 achieves 83.44% accuracy, surpassing the standard ResNet-101 result by +9.5%.",
+      "url": "http://arxiv.org/abs/2410.16954v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2410.16954v2",
+      "doi": "",
+      "arxiv_id": "2410.16954"
+    },
+    {
+      "id": "2602.05988",
+      "title": "Layer-wise LoRA fine-tuning: a similarity metric approach",
+      "authors": [
+        "Keith Ando Ogawa",
+        "Bruno Lopes Yamamoto",
+        "Lucas Lauton de Alcantara",
+        "Lucas Pellicer",
+        "Rosimeire Pereira Costa",
+        "Edson Bollis",
+        "Anna Helena Reali Costa",
+        "Artur Jordao"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Pre-training Large Language Models (LLMs) on web-scale datasets becomes fundamental for advancing general-purpose AI. In contrast, enhancing their predictive performance on downstream tasks typically involves adapting their knowledge through fine-tuning. Parameter-efficient fine-tuning techniques, such as Low-Rank Adaptation (LoRA), aim to reduce the computational cost of this process by freezing the pre-trained model and updating a smaller number of parameters. In comparison to full fine-tuning, these methods achieve over 99\\% reduction in trainable parameter count, depending on the configuration. Unfortunately, such a reduction may prove insufficient as LLMs continue to grow in scale. In this work, we address the previous problem by systematically selecting only a few layers to fine-tune using LoRA or its variants. We argue that not all layers contribute equally to the model adaptation. Leveraging this, we identify the most relevant layers to fine-tune by measuring their contribution to changes in internal representations. Our method is orthogonal to and readily compatible with existing low-rank adaptation techniques. We reduce the trainable parameters in LoRA-based techniques by up to 50\\%, while maintaining the predictive performance across different models and tasks. Specifically, on encoder-only architectures, this reduction in trainable parameters leads to a negligible predictive performance drop on the GLUE benchmark. On decoder-only architectures, we achieve a small drop or even improvements in the predictive performance on mathematical problem-solving capabilities and coding tasks. Finally, this effectiveness extends to multimodal models, for which we also observe competitive results relative to fine-tuning with LoRA modules in all layers. Code is available at: https://github.com/c2d-usp/Layer-wise-LoRA-with-CKA",
+      "url": "http://arxiv.org/abs/2602.05988v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2602.05988v1",
+      "doi": "",
+      "arxiv_id": "2602.05988"
+    },
+    {
+      "id": "2506.15415",
+      "title": "Targeted Lexical Injection: Unlocking Latent Cross-Lingual Alignment in Lugha-Llama via Early-Layer LoRA Fine-Tuning",
+      "authors": [
+        "Stanley Ngugi"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities, yet their performance in low-resource languages (LRLs), such as Swahili, often lags due to data scarcity and underrepresentation in pre-training. A key challenge is achieving robust cross-lingual lexical alignment, crucial for tasks like translation and cross-lingual information retrieval. This paper introduces Targeted Lexical Injection (TLI), a novel and efficient fine-tuning approach. We first demonstrate that Lugha-Llama-8B-wura, a Swahili-centric LLM, exhibits strong, near-perfect lexical alignment for Swahili-English word pairs in its early internal layers (specifically Layer 2, with ~0.99998 average cosine similarity based on a pilot study), a capability not fully reflected in its final output representations (baseline ~0.32 similarity on our evaluation set). TLI leverages this insight by using Low-Rank Adaptation (LoRA) and a contrastive learning objective to fine-tune the model, specifically targeting embeddings from this empirically identified optimal early layer. Our experiments show that TLI significantly improves the output-level lexical alignment for 623 trained Swahili-English word pairs, increasing average cosine similarity from 0.3211 to 0.4113 (+28.08%, p &lt; 1.33 x 10^-240). More importantly, these improvements generalize remarkably well to 63 unseen control word pairs, with similarity increasing from 0.3143 to 0.4033 (+28.32%, p &lt; 7.17 x 10^-27). These findings suggest TLI enhances the model's ability to preserve and propagate its inherent early-layer cross-lingual knowledge, offering a parameter-efficient and effective strategy for improving lexical alignment in LRL-focused LLMs.",
+      "url": "http://arxiv.org/abs/2506.15415v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2506.15415v1",
+      "doi": "",
+      "arxiv_id": "2506.15415"
+    },
+    {
+      "id": "2501.18475",
+      "title": "CLoQ: Enhancing Fine-Tuning of Quantized LLMs via Calibrated LoRA Initialization",
+      "authors": [
+        "Yanxia Deng",
+        "Aozhong Zhang",
+        "Selcuk Gurses",
+        "Naigang Wang",
+        "Zi Yang",
+        "Penghang Yin"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Fine-tuning large language models (LLMs) using low-rank adaptation (LoRA) has become a highly efficient approach for downstream tasks, particularly in scenarios with limited computational resources. However, applying LoRA techniques to quantized LLMs poses unique challenges due to the reduced representational precision of quantized weights. In this paper, we introduce CLoQ (Calibrated LoRA initialization for Quantized LLMs), a simplistic initialization strategy designed to overcome these challenges. Our approach focuses on minimizing the layer-wise discrepancy between the original LLM and its quantized counterpart with LoRA components during initialization. By leveraging a small calibration dataset, CLoQ quantizes a pre-trained LLM and determines the optimal LoRA components for each layer, ensuring a strong foundation for subsequent fine-tuning. A key contribution of this work is a novel theoretical result that enables the accurate and closed-form construction of these optimal LoRA components. We validate the efficacy of CLoQ across multiple tasks such as language generation, arithmetic reasoning, and commonsense reasoning, demonstrating that it consistently outperforms existing LoRA fine-tuning methods for quantized LLMs, especially at ultra low-bit widths.",
+      "url": "http://arxiv.org/abs/2501.18475v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2501.18475v2",
+      "doi": "",
+      "arxiv_id": "2501.18475"
+    },
+    {
+      "id": "2510.27364",
+      "title": "Fine-Tuning Open Video Generators for Cinematic Scene Synthesis: A Small-Data Pipeline with LoRA and Wan2.1 I2V",
+      "authors": [
+        "Meftun Akarsu",
+        "Kerem Catay",
+        "Sedat Bin Vedat",
+        "Enes Kutay Yarkan",
+        "Ilke Senturk",
+        "Arda Sar",
+        "Dafne Eksioglu"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "We present a practical pipeline for fine-tuning open-source video diffusion transformers to synthesize cinematic scenes for television and film production from small datasets. The proposed two-stage process decouples visual style learning from motion generation. In the first stage, Low-Rank Adaptation (LoRA) modules are integrated into the cross-attention layers of the Wan2.1 I2V-14B model to adapt its visual representations using a compact dataset of short clips from Ay Yapim's historical television film El Turco. This enables efficient domain transfer within hours on a single GPU. In the second stage, the fine-tuned model produces stylistically consistent keyframes that preserve costume, lighting, and color grading, which are then temporally expanded into coherent 720p sequences through the model's video decoder. We further apply lightweight parallelization and sequence partitioning strategies to accelerate inference without quality degradation. Quantitative and qualitative evaluations using FVD, CLIP-SIM, and LPIPS metrics, supported by a small expert user study, demonstrate measurable improvements in cinematic fidelity and temporal stability over the base model. The complete training and inference pipeline is released to support reproducibility and adaptation across cinematic domains.",
+      "url": "http://arxiv.org/abs/2510.27364v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2510.27364v1",
+      "doi": "10.5281/zenodo.17370356",
+      "arxiv_id": "2510.27364"
+    },
+    {
+      "id": "2410.20777",
+      "title": "KD-LoRA: A Hybrid Approach to Efficient Fine-Tuning with LoRA and Knowledge Distillation",
+      "authors": [
+        "Rambod Azimi",
+        "Rishav Rishav",
+        "Marek Teichmann",
+        "Samira Ebrahimi Kahou"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Large language models (LLMs) have demonstrated remarkable performance across various downstream tasks. However, the high computational and memory requirements of LLMs are a major bottleneck. To address this, parameter-efficient fine-tuning (PEFT) methods such as low-rank adaptation (LoRA) have been proposed to reduce computational costs while ensuring minimal loss in performance. Additionally, knowledge distillation (KD) has been a popular choice for obtaining compact student models from teacher models. In this work, we present KD-LoRA, a novel fine-tuning method that combines LoRA with KD. Our results demonstrate that KD-LoRA achieves performance comparable to full fine-tuning (FFT) and LoRA while significantly reducing resource requirements. Specifically, KD-LoRA retains 98% of LoRA's performance on the GLUE benchmark, while being 40% more compact. Additionally, KD-LoRA reduces GPU memory usage by 30% compared to LoRA, while decreasing inference time by 30% compared to both FFT and LoRA. We evaluate KD-LoRA across three encoder-only models: BERT, RoBERTa, and DeBERTaV3. Code is available at https://github.com/rambodazimi/KD-LoRA.",
+      "url": "http://arxiv.org/abs/2410.20777v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2410.20777v1",
+      "doi": "",
+      "arxiv_id": "2410.20777"
+    },
+    {
+      "id": "2310.08659",
+      "title": "LoftQ: LoRA-Fine-Tuning-Aware Quantization for Large Language Models",
+      "authors": [
+        "Yixiao Li",
+        "Yifan Yu",
+        "Chen Liang",
+        "Pengcheng He",
+        "Nikos Karampatziakis",
+        "Weizhu Chen",
+        "Tuo Zhao"
+      ],
+      "year": 2023,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Quantization is an indispensable technique for serving Large Language Models (LLMs) and has recently found its way into LoRA fine-tuning. In this work we focus on the scenario where quantization and LoRA fine-tuning are applied together on a pre-trained model. In such cases it is common to observe a consistent gap in the performance on downstream tasks between full fine-tuning and quantization plus LoRA fine-tuning approach. In response, we propose LoftQ (LoRA-Fine-Tuning-aware Quantization), a novel quantization framework that simultaneously quantizes an LLM and finds a proper low-rank initialization for LoRA fine-tuning. Such an initialization alleviates the discrepancy between the quantized and full-precision model and significantly improves generalization in downstream tasks. We evaluate our method on natural language understanding, question answering, summarization, and natural language generation tasks. Experiments show that our method is highly effective and outperforms existing quantization methods, especially in the challenging 2-bit and 2/4-bit mixed precision regimes. The code is available on https://github.com/yxli2123/LoftQ.",
+      "url": "http://arxiv.org/abs/2310.08659v4",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2310.08659v4",
+      "doi": "",
+      "arxiv_id": "2310.08659"
+    },
+    {
+      "id": "2510.00206",
+      "title": "LoRAFusion: Efficient LoRA Fine-Tuning for LLMs",
+      "authors": [
+        "Zhanda Zhu",
+        "Qidong Su",
+        "Yaoyao Ding",
+        "Kevin Song",
+        "Shang Wang",
+        "Gennady Pekhimenko"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Low-Rank Adaptation (LoRA) has become the leading Parameter-Efficient Fine-Tuning (PEFT) method for Large Language Models (LLMs), as it significantly reduces GPU memory usage while maintaining competitive fine-tuned model quality on downstream tasks. Despite these benefits, we identify two key inefficiencies in existing LoRA fine-tuning systems. First, they incur substantial runtime overhead due to redundant memory accesses on large activation tensors. Second, they miss the opportunity to concurrently fine-tune multiple independent LoRA adapters that share the same base model on the same set of GPUs. This leads to missed performance gains such as reduced pipeline bubbles, better communication overlap, and improved GPU load balance.   To address these issues, we introduce LoRAFusion, an efficient LoRA fine-tuning system for LLMs. At the kernel level, we propose a graph-splitting method that fuses memory-bound operations. This design eliminates unnecessary memory accesses and preserves the performance of compute-bound GEMMs without incurring the cost of recomputation or synchronization. At the scheduling level, LoRAFusion introduces an adaptive batching algorithm for multi-job fine-tuning. It first splits LoRA adapters into groups to intentionally stagger batch execution across jobs, and then solves a bin-packing problem within each group to generate balanced, dependency-aware microbatches. LoRAFusion achieves up to $1.96\\times$ ($1.47\\times$ on average) end-to-end speedup compared to Megatron-LM, and up to $1.46\\times$ ($1.29\\times$ on average) improvement over mLoRA, the state-of-the-art multi-LoRA fine-tuning system. Our fused kernel achieves up to $1.39\\times$ ($1.27\\times$ on average) kernel performance improvement and can directly serve as a plug-and-play replacement in existing LoRA systems. We open-source LoRAFusion at https://github.com/CentML/lorafusion.",
+      "url": "http://arxiv.org/abs/2510.00206v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2510.00206v1",
+      "doi": "10.1145/3767295.3769331",
+      "arxiv_id": "2510.00206"
+    },
+    {
+      "id": "2507.01806",
+      "title": "LoRA Fine-Tuning Without GPUs: A CPU-Efficient Meta-Generation Framework for LLMs",
+      "authors": [
+        "Reza Arabpour",
+        "Haitz Sáez de Ocáriz Borde",
+        "Anastasis Kratsios"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Low-Rank Adapters (LoRAs) have transformed the fine-tuning of Large Language Models (LLMs) by enabling parameter-efficient updates. However, their widespread adoption remains limited by the reliance on GPU-based training. In this work, we propose a theoretically grounded approach to LoRA fine-tuning designed specifically for users with limited computational resources, particularly those restricted to standard laptop CPUs. Our method learns a meta-operator that maps any input dataset, represented as a probability distribution, to a set of LoRA weights by leveraging a large bank of pre-trained adapters for the Mistral-7B-Instruct-v0.2 model. Instead of performing new gradient-based updates, our pipeline constructs adapters via lightweight combinations of existing LoRAs directly on CPU. While the resulting adapters do not match the performance of GPU-trained counterparts, they consistently outperform the base Mistral model on downstream tasks, offering a practical and accessible alternative to traditional GPU-based fine-tuning.",
+      "url": "http://arxiv.org/abs/2507.01806v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2507.01806v1",
+      "doi": "",
+      "arxiv_id": "2507.01806"
+    },
+    {
+      "id": "2502.08141",
+      "title": "LowRA: Accurate and Efficient LoRA Fine-Tuning of LLMs under 2 Bits",
+      "authors": [
+        "Zikai Zhou",
+        "Qizheng Zhang",
+        "Hermann Kumbong",
+        "Kunle Olukotun"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Fine-tuning large language models (LLMs) is increasingly costly as models scale to hundreds of billions of parameters, and even parameter-efficient fine-tuning (PEFT) methods like LoRA remain resource-intensive. We introduce LowRA, the first framework to enable LoRA fine-tuning below 2 bits per parameter with minimal performance loss. LowRA optimizes fine-grained quantization - mapping, threshold selection, and precision assignment - while leveraging efficient CUDA kernels for scalable deployment. Extensive evaluations across 4 LLMs and 4 datasets show that LowRA achieves a superior performance-precision trade-off above 2 bits and remains accurate down to 1.15 bits, reducing memory usage by up to 50%. Our results highlight the potential of ultra-low-bit LoRA fine-tuning for resource-constrained environments.",
+      "url": "http://arxiv.org/abs/2502.08141v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2502.08141v1",
+      "doi": "",
+      "arxiv_id": "2502.08141"
+    },
+    {
+      "id": "2509.25214",
+      "title": "On-the-Fly Adaptation to Quantization: Configuration-Aware LoRA for Efficient Fine-Tuning of Quantized LLMs",
+      "authors": [
+        "Rongguang Ye",
+        "Ming Tang",
+        "Edith C. H. Ngai"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "As increasingly large pre-trained models are released, deploying them on edge devices for privacy-preserving applications requires effective compression. Recent works combine quantization with the fine-tuning of high-precision LoRA adapters, which can substantially reduce model size while mitigating the accuracy loss from quantization. However, edge devices have inherently heterogeneous capabilities, while performing configuration-wise fine-tuning for every quantization setting is computationally prohibitive. In this paper, we propose CoA-LoRA, a method that dynamically adjusts the LoRA adapter to arbitrary quantization configurations (i.e., the per-layer bit-width choices of a pre-trained model) without requiring repeated fine-tuning. This is accomplished via a configuration-aware model that maps each configuration to its low-rank adjustments. The effectiveness of this model critically depends on the training configuration set, a collection of configurations chosen to cover different total bit-width budgets. However, constructing a high-quality configuration set is non-trivial. We therefore design a Pareto-based configuration search that iteratively optimizes the training configuration set, yielding more precise low-rank adjustments. Our experiments demonstrate that, unlike the state-of-the-art methods that require fine-tuning a separate LoRA adapter for each configuration, CoA-LoRA incurs no additional time cost while achieving comparable or even superior performance to those methods.",
+      "url": "http://arxiv.org/abs/2509.25214v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2509.25214v2",
+      "doi": "",
+      "arxiv_id": "2509.25214"
+    },
+    {
+      "id": "2405.00732",
+      "title": "LoRA Land: 310 Fine-tuned LLMs that Rival GPT-4, A Technical Report",
+      "authors": [
+        "Justin Zhao",
+        "Timothy Wang",
+        "Wael Abid",
+        "Geoffrey Angus",
+        "Arnav Garg",
+        "Jeffery Kinnison",
+        "Alex Sherstinsky",
+        "Piero Molino",
+        "Travis Addair",
+        "Devvret Rishi"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Low Rank Adaptation (LoRA) has emerged as one of the most widely adopted methods for Parameter Efficient Fine-Tuning (PEFT) of Large Language Models (LLMs). LoRA reduces the number of trainable parameters and memory usage while achieving comparable performance to full fine-tuning. We aim to assess the viability of training and serving LLMs fine-tuned with LoRA in real-world applications. First, we measure the quality of LLMs fine-tuned with quantized low rank adapters across 10 base models and 31 tasks for a total of 310 models. We find that 4-bit LoRA fine-tuned models outperform base models by 34 points and GPT-4 by 10 points on average. Second, we investigate the most effective base models for fine-tuning and assess the correlative and predictive capacities of task complexity heuristics in forecasting the outcomes of fine-tuning. Finally, we evaluate the latency and concurrency capabilities of LoRAX, an open-source Multi-LoRA inference server that facilitates the deployment of multiple LoRA fine-tuned models on a single GPU using shared base model weights and dynamic adapter loading. LoRAX powers LoRA Land, a web application that hosts 25 LoRA fine-tuned Mistral-7B LLMs on a single NVIDIA A100 GPU with 80GB memory. LoRA Land highlights the quality and cost-effectiveness of employing multiple specialized LLMs over a single, general-purpose LLM.",
+      "url": "http://arxiv.org/abs/2405.00732v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2405.00732v1",
+      "doi": "",
+      "arxiv_id": "2405.00732"
+    },
+    {
+      "id": "2408.07888",
+      "title": "Evaluating Fine-Tuning Efficiency of Human-Inspired Learning Strategies in Medical Question Answering",
+      "authors": [
+        "Yushi Yang",
+        "Andrew M. Bean",
+        "Robert McCraith",
+        "Adam Mahdi"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Fine-tuning Large Language Models (LLMs) incurs considerable training costs, driving the need for data-efficient training with optimised data ordering. Human-inspired strategies offer a solution by organising data based on human learning practices. This study evaluates the fine-tuning efficiency of five human-inspired strategies across four language models, three datasets, and both human- and LLM-labelled data in the context of medical question answering. These strategies achieve the best accuracy gain of 1.81% and an average gain of 1.02% across datasets, with interleaved strategies delivering the best average results. However, the best strategy varies across model-dataset combinations, limiting the generalisability of the effects of any single strategy. Additionally, LLM-defined question difficulty outperforms human-defined labels in curriculum-based learning, showing the potential of model-generated data as a cost-effective alternative for optimising fine-tuning.",
+      "url": "http://arxiv.org/abs/2408.07888v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2408.07888v2",
+      "doi": "",
+      "arxiv_id": "2408.07888"
+    },
+    {
+      "id": "2410.08661",
+      "title": "QEFT: Quantization for Efficient Fine-Tuning of LLMs",
+      "authors": [
+        "Changhun Lee",
+        "Jun-gyu Jin",
+        "Younghyun Cho",
+        "Eunhyeok Park"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "With the rapid growth in the use of fine-tuning for large language models (LLMs), optimizing fine-tuning while keeping inference efficient has become highly important. However, this is a challenging task as it requires improvements in all aspects, including inference speed, fine-tuning speed, memory consumption, and, most importantly, model quality. Previous studies have attempted to achieve this by combining quantization with fine-tuning, but they have failed to enhance all four aspects simultaneously. In this study, we propose a new lightweight technique called Quantization for Efficient Fine-Tuning (QEFT). QEFT accelerates both inference and fine-tuning, is supported by robust theoretical foundations, offers high flexibility, and maintains good hardware compatibility. Our extensive experiments demonstrate that QEFT matches the quality and versatility of full-precision parameter-efficient fine-tuning, while using fewer resources. Our code is available at https://github.com/xvyaward/qeft.",
+      "url": "http://arxiv.org/abs/2410.08661v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2410.08661v1",
+      "doi": "",
+      "arxiv_id": "2410.08661"
+    },
+    {
+      "id": "2504.07998",
+      "title": "CDM-QTA: Quantized Training Acceleration for Efficient LoRA Fine-Tuning of Diffusion Model",
+      "authors": [
+        "Jinming Lu",
+        "Minghao She",
+        "Wendong Mao",
+        "Zhongfeng Wang"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Fine-tuning large diffusion models for custom applications demands substantial power and time, which poses significant challenges for efficient implementation on mobile devices. In this paper, we develop a novel training accelerator specifically for Low-Rank Adaptation (LoRA) of diffusion models, aiming to streamline the process and reduce computational complexity. By leveraging a fully quantized training scheme for LoRA fine-tuning, we achieve substantial reductions in memory usage and power consumption while maintaining high model fidelity. The proposed accelerator features flexible dataflow, enabling high utilization for irregular and variable tensor shapes during the LoRA process. Experimental results show up to 1.81x training speedup and 5.50x energy efficiency improvements compared to the baseline, with minimal impact on image generation quality.",
+      "url": "http://arxiv.org/abs/2504.07998v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2504.07998v1",
+      "doi": "",
+      "arxiv_id": "2504.07998"
+    },
+    {
+      "id": "2408.03099",
+      "title": "Topic Modeling with Fine-tuning LLMs and Bag of Sentences",
+      "authors": [
+        "Johannes Schneider"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Large language models (LLMs) are increasingly used for topic modeling, outperforming classical topic models such as LDA. Commonly, pre-trained LLM encoders such as BERT are used out-of-the-box despite the fact that fine-tuning is known to improve LLMs considerably. The challenge lies in obtaining a suitable labeled dataset for fine-tuning. In this paper, we build on the recent idea of using bags of sentences as the elementary unit for computing topics. Based on this idea, we derive an approach called FT-Topic to perform unsupervised fine-tuning, relying primarily on two steps for constructing a training dataset in an automatic fashion. First, a heuristic method identifies pairs of sentence groups that are assumed to belong either to the same topic or to different topics. Second, we remove sentence pairs that are likely labeled incorrectly. The resulting dataset is then used to fine-tune an encoder LLM, which can be leveraged by any topic modeling approach that uses embeddings. In this work, we demonstrate its effectiveness by deriving a novel state-of-the-art topic modeling method called SenClu. The method achieves fast inference through an expectation-maximization algorithm and hard assignments of sentence groups to a single topic, while allowing users to encode prior knowledge about the topic-document distribution. Code is available at https://github.com/JohnTailor/FT-Topic",
+      "url": "http://arxiv.org/abs/2408.03099v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2408.03099v2",
+      "doi": "",
+      "arxiv_id": "2408.03099"
+    },
+    {
+      "id": "2506.20856",
+      "title": "Leaner Training, Lower Leakage: Revisiting Memorization in LLM Fine-Tuning with LoRA",
+      "authors": [
+        "Fei Wang",
+        "Baochun Li"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Memorization in large language models (LLMs) makes them vulnerable to data extraction attacks. While pre-training memorization has been extensively studied, fewer works have explored its impact in fine-tuning, particularly for LoRA fine-tuning, a widely adopted parameter-efficient method.   In this work, we re-examine memorization in fine-tuning and uncover a surprising divergence from prior findings across different fine-tuning strategies. Factors such as model scale and data duplication, which strongly influence memorization in pre-training and full fine-tuning, do not follow the same trend in LoRA fine-tuning. Using a more relaxed similarity-based memorization metric, we demonstrate that LoRA significantly reduces memorization risks compared to full fine-tuning, while still maintaining strong task performance.",
+      "url": "http://arxiv.org/abs/2506.20856v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2506.20856v1",
+      "doi": "",
+      "arxiv_id": "2506.20856"
+    },
+    {
+      "id": "2406.13046",
+      "title": "Bayesian-LoRA: LoRA based Parameter Efficient Fine-Tuning using Optimal Quantization levels and Rank Values trough Differentiable Bayesian Gates",
+      "authors": [
+        "Cristian Meo",
+        "Ksenia Sycheva",
+        "Anirudh Goyal",
+        "Justin Dauwels"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "It is a common practice in natural language processing to pre-train a single model on a general domain and then fine-tune it for downstream tasks. However, when it comes to Large Language Models, fine-tuning the entire model can be computationally expensive, resulting in very intensive energy consumption. As a result, several Parameter Efficient Fine-Tuning (PEFT) approaches were recently proposed. One of the most popular approaches is low-rank adaptation (LoRA), where the key insight is decomposing the update weights of the pre-trained model into two low-rank matrices. However, the proposed approaches either use the same rank value across all different weight matrices, which has been shown to be a sub-optimal choice, or do not use any quantization technique, one of the most important factors when it comes to a model's energy consumption. In this work, we propose Bayesian-LoRA which approaches low-rank adaptation and quantization from a Bayesian perspective by employing a prior distribution on both quantization levels and rank values. As a result, B-LoRA is able to fine-tune a pre-trained model on a specific downstream task, finding the optimal rank values and quantization levels for every low-rank matrix. We validate the proposed model by fine-tuning a pre-trained DeBERTaV3 on the GLUE benchmark. Moreover, we compare it to relevant baselines and present both qualitative and quantitative results, showing how the proposed approach is able to learn optimal-rank quantized matrices. B-LoRA performs on par with or better than the baselines while reducing the total number of bit operations by roughly 70% compared to the baseline methods.",
+      "url": "http://arxiv.org/abs/2406.13046v3",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2406.13046v3",
+      "doi": "",
+      "arxiv_id": "2406.13046"
+    },
+    {
+      "id": "2505.23724",
+      "title": "SC-LoRA: Balancing Efficient Fine-tuning and Knowledge Preservation via Subspace-Constrained LoRA",
+      "authors": [
+        "Minrui Luo",
+        "Fuhang Kuang",
+        "Yu Wang",
+        "Zirui Liu",
+        "Tianxing He"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Parameter-Efficient Fine-Tuning (PEFT) methods, particularly Low-Rank Adaptation (LoRA), are indispensable for efficiently customizing Large Language Models (LLMs). However, vanilla LoRA suffers from slow convergence speed and knowledge forgetting problems. Recent studies have leveraged the power of designed LoRA initialization, to enhance the fine-tuning efficiency, or to preserve knowledge in the pre-trained LLM. However, none of these works can address the two cases at the same time. To this end, we introduce Subspace-Constrained LoRA (SC-LoRA), a novel LoRA initialization framework engineered to navigate the trade-off between efficient fine-tuning and knowledge preservation. We achieve this by constraining the output of trainable LoRA adapters in a low-rank subspace, where the context information of fine-tuning data is most preserved while the context information of preserved knowledge is least retained, in a balanced way. Such constraint enables the trainable weights to primarily focus on the main features of fine-tuning data while avoiding damaging the preserved knowledge features. We provide theoretical analysis on our method, and conduct extensive experiments including safety preservation and world knowledge preservation, on various downstream tasks. In our experiments, SC-LoRA succeeds in delivering superior fine-tuning performance while markedly diminishing knowledge forgetting, surpassing contemporary LoRA initialization methods.",
+      "url": "http://arxiv.org/abs/2505.23724v3",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2505.23724v3",
+      "doi": "",
+      "arxiv_id": "2505.23724"
+    },
+    {
+      "id": "2506.01001",
+      "title": "FedQuad: Adaptive Layer-wise LoRA Deployment and Activation Quantization for Federated Fine-Tuning",
+      "authors": [
+        "Rukuo Li",
+        "Jianchun Liu",
+        "Hongli Xu",
+        "Liusheng Huang"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Federated fine-tuning (FedFT) provides an effective paradigm for fine-tuning large language models (LLMs) in privacy-sensitive scenarios. However, practical deployment remains challenging due to the limited resources on end devices. Existing methods typically utilize parameter-efficient fine-tuning (PEFT) techniques, such as Low-Rank Adaptation (LoRA), to substantially reduce communication overhead. Nevertheless, significant memory usage for activation storage and computational demands from full backpropagation remain major barriers to efficient deployment on resource-constrained end devices. Moreover, substantial resource heterogeneity across devices results in severe synchronization bottlenecks, diminishing the overall fine-tuning efficiency. To address these issues, we propose FedQuad, a novel LoRA-based FedFT framework that adaptively adjusts the LoRA depth (the number of consecutive tunable LoRA layers from the output) according to device computational capabilities, while employing activation quantization to reduce memory overhead, thereby enabling efficient deployment on resource-constrained devices. Specifically, FedQuad first identifies the feasible and efficient combinations of LoRA depth and the number of activation quantization layers based on device-specific resource constraints. Subsequently, FedQuad employs a greedy strategy to select the optimal configurations for each device, effectively accommodating system heterogeneity. Extensive experiments demonstrate that FedQuad achieves a 1.4-5.3x convergence acceleration compared to state-of-the-art baselines when reaching target accuracy, highlighting its efficiency and deployability in resource-constrained and heterogeneous end-device environments.",
+      "url": "http://arxiv.org/abs/2506.01001v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2506.01001v1",
+      "doi": "",
+      "arxiv_id": "2506.01001"
+    },
+    {
+      "id": "2603.10904",
+      "title": "When Fine-Tuning Fails and when it Generalises: Role of Data Diversity and Mixed Training in LLM-based TTS",
+      "authors": [
+        "Anupam Purwar",
+        "Aditya Choudhary"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Large language models are increasingly adopted as semantic backbones for neural text-to-speech systems. However, frozen LLM representations are insufficient for modeling speaker specific acoustic and perceptual characteristics. Our experiments involving fine tuning of the Language Model backbone of TTS show promise in improving the voice consistency and Signal to Noise ratio SNR in voice cloning task. Across multiple speakers LoRA finetuning consistently outperforms the non-finetuned base Qwen-0.5B model across three complementary dimensions of speech quality. First, perceptual quality improves significantly with DNS-MOS gains of up to 0.42 points for speakers whose training data exhibits sufficient acoustic variability. Second, speaker fidelity improves for all evaluated speakers with consistent increases in voice similarity indicating that LoRA effectively adapts speaker identity representations without degrading linguistic modeling. Third, signal level quality improves in most cases with signal to noise ratio increasing by as much as 34 percent. Crucially these improvements are strongly governed by the characteristics of the training data. Speakers with high variability in acoustic energy and perceptual quality achieve simultaneous gains in DNS-MOS voice similarity and SNR. Overall this work establishes that LoRA finetuning is not merely a parameter efficient optimization technique but an effective mechanism for better speaker level adaptation in compact LLM-based TTS systems. When supported by sufficiently diverse training data LoRA adapted Qwen-0.5B consistently surpasses its frozen base model in perceptual quality speaker similarity with low latency using GGUF model hosted in quantized form.",
+      "url": "http://arxiv.org/abs/2603.10904v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2603.10904v1",
+      "doi": "",
+      "arxiv_id": "2603.10904"
+    },
+    {
+      "id": "2410.20625",
+      "title": "LoRA Done RITE: Robust Invariant Transformation Equilibration for LoRA Optimization",
+      "authors": [
+        "Jui-Nan Yen",
+        "Si Si",
+        "Zhao Meng",
+        "Felix Yu",
+        "Sai Surya Duvvuri",
+        "Inderjit S. Dhillon",
+        "Cho-Jui Hsieh",
+        "Sanjiv Kumar"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Low-rank adaption (LoRA) is a widely used parameter-efficient finetuning method for LLM that reduces memory requirements. However, current LoRA optimizers lack transformation invariance, meaning the actual updates to the weights depends on how the two LoRA factors are scaled or rotated. This deficiency leads to inefficient learning and sub-optimal solutions in practice. This paper introduces LoRA-RITE, a novel adaptive matrix preconditioning method for LoRA optimization, which can achieve transformation invariance and remain computationally efficient. We provide theoretical analysis to demonstrate the benefit of our method and conduct experiments on various LLM tasks with different models including Gemma 2B, 7B, and mT5-XXL. The results demonstrate consistent improvements against existing optimizers. For example, replacing Adam with LoRA-RITE during LoRA fine-tuning of Gemma-2B yielded 4.6\\% accuracy gain on Super-Natural Instructions and 3.5\\% accuracy gain across other four LLM benchmarks (HellaSwag, ArcChallenge, GSM8K, OpenBookQA).",
+      "url": "http://arxiv.org/abs/2410.20625v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2410.20625v2",
+      "doi": "",
+      "arxiv_id": "2410.20625"
+    },
+    {
+      "id": "2502.01378",
+      "title": "CE-LoRA: Computation-Efficient LoRA Fine-Tuning for Language Models",
+      "authors": [
+        "Guanduo Chen",
+        "Yutong He",
+        "Yipeng Hu",
+        "Kun Yuan",
+        "Binhang Yuan"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Large Language Models (LLMs) demonstrate exceptional performance across various tasks but demand substantial computational resources even for fine-tuning computation. Although Low-Rank Adaptation (LoRA) significantly alleviates memory consumption during fine-tuning, its impact on computational cost reduction is limited. This paper identifies the computation of activation gradients as the primary bottleneck in LoRA's backward propagation and introduces the Computation-Efficient LoRA (CE-LoRA) algorithm, which enhances computational efficiency while preserving memory efficiency. CE-LoRA leverages two key techniques: Approximated Matrix Multiplication, which replaces dense multiplications of large and complete matrices with sparse multiplications involving only critical rows and columns, and the Double-LoRA technique, which reduces error propagation in activation gradients. Theoretically, CE-LoRA converges at the same rate as LoRA, $ \\mathcal{O}(1/\\sqrt{T}) $, where $T$ is the number of iteartions. Empirical evaluations confirm that CE-LoRA significantly reduces computational costs compared to LoRA without notable performance degradation.",
+      "url": "http://arxiv.org/abs/2502.01378v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2502.01378v1",
+      "doi": "",
+      "arxiv_id": "2502.01378"
+    },
+    {
+      "id": "2511.00101",
+      "title": "Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving",
+      "authors": [
+        "Yuchen Zhang",
+        "Hanyue Du",
+        "Chun Cao",
+        "Jingwei Xu"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Low-Rank Adaptation (LoRA) has become a widely adopted parameter-efficient fine-tuning (PEFT) technique for adapting large language models (LLMs) to downstream tasks. While prior work has explored strategies for integrating LLM training and serving, there still remains a gap in unifying fine-tuning and inference for LoRA-based models. We present Loquetier, a virtualized multi-LoRA framework that seamlessly integrates LoRA fine-tuning and serving within a single runtime. Loquetier introduces two key components: (1) a Virtualized Module that isolates PEFT-based modifications and supports multiple adapters on a shared base model, and (2) an optimized computation flow with a kernel design that merges fine-tuning and inference paths in forward propagation, enabling efficient batching and minimizing kernel invocation overhead. Extensive experiments across three task settings show that Loquetier consistently outperforms existing baselines in both performance and flexibility, achieving up to $3.0\\times$ the throughput of the state-of-the-art co-serving system on inference-only tasks and $46.4\\times$ higher SLO attainment than PEFT on unified fine-tuning and inference tasks. The implementation of Loquetier is publicly available at https://github.com/NJUDeepEngine/Loquetier.",
+      "url": "http://arxiv.org/abs/2511.00101v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2511.00101v1",
+      "doi": "",
+      "arxiv_id": "2511.00101"
+    },
+    {
+      "id": "2404.19245",
+      "title": "HydraLoRA: An Asymmetric LoRA Architecture for Efficient Fine-Tuning",
+      "authors": [
+        "Chunlin Tian",
+        "Zhan Shi",
+        "Zhijiang Guo",
+        "Li Li",
+        "Chengzhong Xu"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Adapting Large Language Models (LLMs) to new tasks through fine-tuning has been made more efficient by the introduction of Parameter-Efficient Fine-Tuning (PEFT) techniques, such as LoRA. However, these methods often underperform compared to full fine-tuning, particularly in scenarios involving complex datasets. This issue becomes even more pronounced in complex domains, highlighting the need for improved PEFT approaches that can achieve better performance. Through a series of experiments, we have uncovered two critical insights that shed light on the training and parameter inefficiency of LoRA. Building on these insights, we have developed HydraLoRA, a LoRA framework with an asymmetric structure that eliminates the need for domain expertise. Our experiments demonstrate that HydraLoRA outperforms other PEFT approaches, even those that rely on domain knowledge during the training and inference phases.",
+      "url": "http://arxiv.org/abs/2404.19245v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2404.19245v2",
+      "doi": "",
+      "arxiv_id": "2404.19245"
+    },
+    {
+      "id": "2506.12015",
+      "title": "EMLoC: Emulator-based Memory-efficient Fine-tuning with LoRA Correction",
+      "authors": [
+        "Hsi-Che Lin",
+        "Yu-Chu Yu",
+        "Kai-Po Chang",
+        "Yu-Chiang Frank Wang"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Open-source foundation models have seen rapid adoption and development, enabling powerful general-purpose capabilities across diverse domains. However, fine-tuning large foundation models for domain-specific or personalized tasks remains prohibitively expensive for most users due to the significant memory overhead beyond that of inference. We introduce EMLoC, an Emulator-based Memory-efficient fine-tuning framework with LoRA Correction, which enables model fine-tuning within the same memory budget required for inference. EMLoC constructs a task-specific light-weight emulator using activation-aware singular value decomposition (SVD) on a small downstream calibration set. Fine-tuning then is performed on this lightweight emulator via LoRA. To tackle the misalignment between the original model and the compressed emulator, we propose a novel compensation algorithm to correct the fine-tuned LoRA module, which thus can be merged into the original model for inference. EMLoC supports flexible compression ratios and standard training pipelines, making it adaptable to a wide range of applications. Extensive experiments demonstrate that EMLoC outperforms other baselines across multiple datasets and modalities. Moreover, without quantization, EMLoC enables fine-tuning of a 38B model, which originally required 95GB of memory, on a single 24GB consumer GPU-bringing efficient and practical model adaptation to individual users.",
+      "url": "http://arxiv.org/abs/2506.12015v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2506.12015v2",
+      "doi": "",
+      "arxiv_id": "2506.12015"
+    }
+  ]
+}

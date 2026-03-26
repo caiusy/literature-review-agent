@@ -11,6 +11,7 @@ Tasks:
 - #7: 重写 synthesis-agent — 大规模支持 + 增强对比表 - https://github.com/caiusy/literature-review-agent/issues/7
 - #8: 编写 architecture.md + implementation-log.md - https://github.com/caiusy/literature-review-agent/issues/8
 - #9: 端到端测试 — 用真实关键词跑完全流程 - https://github.com/caiusy/literature-review-agent/issues/9
+- #10: Refactor: query-scoped storage for literature review runs - https://github.com/caiusy/literature-review-agent/issues/10
 
 Dependency chain:
 - #2 (安装依赖) → #3 (MCP server) → #4 (opencode.json)
