@@ -1,3 +1,4 @@
 marker-pdf
 fastmcp
 httpx
+pypdf

@@ -336,20 +336,22 @@ async def download_paper(
 def convert_pdf(
     pdf_path: str,
     output_dir: str = "data/papers-md",
+    mode: str = "fast",
 ) -> str:
-    """Convert a PDF to Markdown using marker-pdf.
+    """Convert a PDF to Markdown.
+
+    Modes:
+    - fast: use pypdf text extraction for speed (default, target ~1 minute or less)
+    - layout: use marker-pdf for higher-fidelity layout reconstruction
 
     Args:
         pdf_path: Path to the input PDF file.
         output_dir: Directory to save the Markdown output (default: data/papers-md).
+        mode: Conversion mode, one of {"fast", "layout"}.
 
     Returns:
         JSON with conversion status and output file path.
     """
-    from marker.converters.pdf import PdfConverter
-    from marker.models import create_model_dict
-    from marker.output import text_from_rendered
-
     pdf = Path(pdf_path)
     if not pdf.exists():
         return json.dumps({"status": "failed", "reason": f"File not found: {pdf_path}"})
@@ -369,23 +371,70 @@ def convert_pdf(
         )
 
     try:
-        converter = PdfConverter(artifact_dict=create_model_dict())
-        rendered = converter(str(pdf))
-        text, _, images = text_from_rendered(rendered)
+        if mode == "fast":
+            from pypdf import PdfReader
 
-        md_path.write_text(text, encoding="utf-8")
+            reader = PdfReader(str(pdf))
+            parts = []
+            for idx, page in enumerate(reader.pages, start=1):
+                text = page.extract_text() or ""
+                text = text.strip()
+                if text:
+                    parts.append(f"# Page {idx}\n\n{text}\n")
+
+            combined = "\n".join(parts).strip()
+            if not combined:
+                return json.dumps(
+                    {
+                        "status": "failed",
+                        "reason": "No extractable text found with fast mode",
+                        "pdf_path": pdf_path,
+                        "mode": mode,
+                    }
+                )
+
+            md_path.write_text(combined + "\n", encoding="utf-8")
+            return json.dumps(
+                {
+                    "status": "success",
+                    "path": str(md_path),
+                    "chars": len(combined),
+                    "pages": len(reader.pages),
+                    "mode": mode,
+                }
+            )
+
+        if mode == "layout":
+            from marker.converters.pdf import PdfConverter
+            from marker.models import create_model_dict
+            from marker.output import text_from_rendered
+
+            converter = PdfConverter(artifact_dict=create_model_dict())
+            rendered = converter(str(pdf))
+            text, _, images = text_from_rendered(rendered)
+            md_path.write_text(text, encoding="utf-8")
+            return json.dumps(
+                {
+                    "status": "success",
+                    "path": str(md_path),
+                    "chars": len(text),
+                    "images": len(images),
+                    "mode": mode,
+                }
+            )
 
         return json.dumps(
             {
-                "status": "success",
-                "path": str(md_path),
-                "chars": len(text),
-                "images": len(images),
+                "status": "failed",
+                "reason": f"Unsupported mode: {mode}",
+                "pdf_path": pdf_path,
             }
         )
 
     except Exception as e:
-        return json.dumps({"status": "failed", "reason": str(e), "pdf_path": pdf_path})
+        return json.dumps(
+            {"status": "failed", "reason": str(e), "pdf_path": pdf_path, "mode": mode}
+        )
 
 
 # ---------------------------------------------------------------------------

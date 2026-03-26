@@ -1,0 +1,742 @@
+{
+  "query": "bev detection",
+  "sources": [
+    "semantic_scholar",
+    "arxiv"
+  ],
+  "total_before_dedup": 39,
+  "total_after_dedup": 35,
+  "errors": [],
+  "papers": [
+    {
+      "id": "10.1109/JSSC.2024.3508873",
+      "title": "Hawkeye: A Point Cloud Neural Network Processor With Virtual Pillar and Quadtree-Based Workload Management for Real-Time Outdoor BEV Detection",
+      "authors": [
+        "Sukbin Lim",
+        "Jaehoon Heo",
+        "Jinho Yang",
+        "Joo-Young Kim"
+      ],
+      "year": 2025,
+      "venue": "IEEE Journal of Solid-State Circuits",
+      "citations": 3,
+      "abstract": "Large-scale 3-D processing using the point cloud neural network (PNN) has become essential for applications such as an autonomous driving system. Among the various methods, pillar-based PNN is widely utilized for processing large-scale outdoor environments. However, due to the irregular and sparse nature of the point cloud compared to the regular and dense image, achieving high efficiency has been challenging in previous works. Inspired by the LiDAR mechanism that generates point clouds, this article proposes Hawkeye, a large-scale bird’s-eye-view (BEV) detection processor designed for end-to-end processing of pillar-based PNN. Hawkeye incorporates three key features: 1) a feature encoding core (FEC) that introduces virtual pillars (VPs), dynamically generating temporal pillars to facilitate continuous processing; 2) a map management core (MMC) that utilizes a quadtree-based workload management system, enabling region-of-interest (ROI)-based skipping to optimize computational efficiency; and 3) a low-precision neural engine (LPNE) that employs a bit-slice compute architecture with sign-magnitude (SM) representation, enhancing slice-level skipping (SLS) capabilities. Fabricated in Samsung’s 28-nm CMOS technology, Hawkeye achieves a performance of 44.2 frames per second (FPS) at 320 MHz on the PointPillars with the KITTI dataset. Furthermore, with the aid of ROI-based skipping and SM-based SLS, Hawkeye demonstrates an effective energy efficiency of 38.5 TOPS/W under 0.74 V and 40 MHz.",
+      "url": "https://www.semanticscholar.org/paper/7173d17ac1861290a1cb89c6673b56b4bf08ed47",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/JSSC.2024.3508873",
+      "arxiv_id": ""
+    },
+    {
+      "id": "2408.09122",
+      "title": "MaskBEV: Towards A Unified Framework for BEV Detection and Map Segmentation",
+      "authors": [
+        "Xiao Zhao",
+        "Xukun Zhang",
+        "Dingkang Yang",
+        "Mingyang Sun",
+        "Mingcheng Li",
+        "Shunli Wang",
+        "Lihua Zhang"
+      ],
+      "year": 2024,
+      "venue": "ACM Multimedia",
+      "citations": 11,
+      "abstract": "Accurate and robust multimodal multi-task perception is crucial for modern autonomous driving systems. However, current multimodal perception research follows independent paradigms designed for specific perception tasks, leading to a lack of complementary learning among tasks and decreased performance in multi-task learning (MTL) due to joint training. In this paper, we propose MaskBEV, a masked attention-based MTL paradigm that unifies 3D object detection and bird's eye view (BEV) map segmentation. MaskBEV introduces a task-agnostic Transformer decoder to process these diverse tasks, enabling MTL to be completed in a unified decoder without requiring additional design of specific task heads. To fully exploit the complementary information between BEV map segmentation and 3D object detection tasks in BEV space, we propose spatial modulation and scene-level context aggregation strategies. These strategies consider the inherent dependencies between BEV segmentation and 3D detection, naturally boosting MTL performance. Extensive experiments on nuScenes dataset show that compared with previous state-of-the-art MTL methods, MaskBEV achieves 1.3 NDS improvement in 3D object detection and 2.7 mIoU improvement in BEV map segmentation, while also demonstrating slightly leading inference speed.",
+      "url": "https://www.semanticscholar.org/paper/8c469b5ab7e25adb250fa9c68eb7b022b03ef6af",
+      "source": "semantic_scholar",
+      "open_access_url": "http://arxiv.org/pdf/2408.09122",
+      "doi": "10.1145/3664647.3681360",
+      "arxiv_id": "2408.09122"
+    },
+    {
+      "id": "10.1109/CICC60959.2024.10529067",
+      "title": "A 38.5TOPS/W Point Cloud Neural Network Processor with Virtual Pillar and Quadtree-based Workload Management for Real-Time Outdoor BEV Detection",
+      "authors": [
+        "Sukbin Lim",
+        "Jaehoon Heo",
+        "Jinho Yang",
+        "Joo-Young Kim"
+      ],
+      "year": 2024,
+      "venue": "IEEE Custom Integrated Circuits Conference",
+      "citations": 3,
+      "abstract": "In recent years, the significance of 3D point cloud processing has witnessed a remarkable upsurge, particularly in emerging application domains such as autonomous vehicles and mixed reality. The voxel-based methodologies, paired with point cloud neural network (PNN), are dominant for managing large-scale outdoor point cloud. However, the adoption of voxel introduces significant computational and memory overhead due to their cubic structure. To address this challenge, recent studies have introduced the pillar, which extends a voxel vertically to offer a bird's-eye-view (BEV) representation while reducing computational requirements significantly. As shown in Fig. 1, pillar-based PNN [1]–[2] comprises two key stages: the feature encoding network (FEN) and the convolutional neural network (CNN) backbone. While previous accelerators [3–4] have primarily focused on accelerating the backbone, the significance of FEN is emphasized as its processing time becomes on par with that of the backbone. There are major computational challenges that previous works have not fully addressed. 1) FEN necessitates a large on-chip memory due to the unpredictable access pattern of point cloud and dependency of cluster for handling dynamic real-world environments. 2) The pseudo-image derived from FEN exhibits high sparsity due to the limitations of LiDAR, which cannot capture the back side of objects once they are detected. However, its sparsity diminishes across layers during operations.",
+      "url": "https://www.semanticscholar.org/paper/abc558ded4fb90e73b7327a0756b9c2e85459dbd",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/CICC60959.2024.10529067",
+      "arxiv_id": ""
+    },
+    {
+      "id": "10.1109/ECIS65594.2025.11086879",
+      "title": "Deep-estimate excluded BEV detection with Two stage LiDAR and Camera Fusion",
+      "authors": [
+        "Hanzhi Meng",
+        "Xianfeng Ou",
+        "Yuan Liu",
+        "Yijun Jiang",
+        "Zhongkui Liu",
+        "Siyuan Chen"
+      ],
+      "year": 2025,
+      "venue": "European Conference on Information Systems",
+      "citations": 0,
+      "abstract": "Bird’s-Eye View (BEV) representation is a core paradigm for 3D perception in autonomous driving. Vision-based BEV methods often rely on depth estimation, which introduces noise and computational overhead, while LiDAR provides accurate geometry but lacks semantic richness and is limited by data sparsity. We propose a novel hybrid framework that directly fuses image and LiDAR features without relying on explicit depth estimation. A lightweight cross-attention Transformer maps image features to BEV space, and a two-stage fusion module progressively integrates multi-modal features. Our method outperforms depth-based and early-fusion baselines, achieving 72.2% mAP on the nuScenes benchmark. The proposed architecture is efficient, robust, and well-suited for real-time deployment in autonomous systems.",
+      "url": "https://www.semanticscholar.org/paper/91d827f640dc68c65913c254794dd164af7acd2b",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/ECIS65594.2025.11086879",
+      "arxiv_id": ""
+    },
+    {
+      "id": "2304.09801",
+      "title": "MetaBEV: Solving Sensor Failures for BEV Detection and Map Segmentation",
+      "authors": [
+        "Chongjian Ge",
+        "Junsong Chen",
+        "Enze Xie",
+        "Zhongdao Wang",
+        "Lanqing Hong",
+        "Huchuan Lu",
+        "Zhenguo Li",
+        "P. Luo"
+      ],
+      "year": 2023,
+      "venue": "arXiv.org",
+      "citations": 20,
+      "abstract": "Perception systems in modern autonomous driving vehicles typically take inputs from complementary multi-modal sensors, e.g., LiDAR and cameras. However, in real-world applications, sensor corruptions and failures lead to inferior performances, thus compromising autonomous safety. In this paper, we propose a robust framework, called MetaBEV, to address extreme real-world environments involving overall six sensor corruptions and two extreme sensor-missing situations. In MetaBEV, signals from multiple sensors are first processed by modal-specific encoders. Subsequently, a set of dense BEV queries are initialized, termed meta-BEV. These queries are then processed iteratively by a BEV-Evolving decoder, which selectively aggregates deep features from either LiDAR, cameras, or both modalities. The updated BEV representations are further leveraged for multiple 3D prediction tasks. Additionally, we introduce a new M2oE structure to alleviate the performance drop on distinct tasks in multi-task joint learning. Finally, MetaBEV is evaluated on the nuScenes dataset with 3D object detection and BEV map segmentation tasks. Experiments show MetaBEV outperforms prior arts by a large margin on both full and corrupted modalities. For instance, when the LiDAR signal is missing, MetaBEV improves 35.5% detection NDS and 17.7% segmentation mIoU upon the vanilla BEVFusion model; and when the camera signal is absent, MetaBEV still achieves 69.2% NDS and 53.7% mIoU, which is even higher than previous works that perform on full-modalities. Moreover, MetaBEV performs fairly against previous methods in both canonical perception and multi-task learning settings, refreshing state-of-the-art nuScenes BEV map segmentation with 70.4% mIoU.",
+      "url": "https://www.semanticscholar.org/paper/7d21792487182546d4f79e33da0735de3ed00c30",
+      "source": "semantic_scholar",
+      "open_access_url": "http://arxiv.org/pdf/2304.09801",
+      "doi": "10.48550/arXiv.2304.09801",
+      "arxiv_id": "2304.09801"
+    },
+    {
+      "id": "10.1109/ICVES61986.2024.10927746",
+      "title": "MR-BEV: A Multi-Resolution BEV Detection Framework with a Better Efficiency-Accuracy Trade-off",
+      "authors": [
+        "Tengfei Zhang",
+        "Heng Zhang",
+        "Ruyang Li",
+        "Qi Deng",
+        "Yaqian Zhao",
+        "Rengang Li"
+      ],
+      "year": 2024,
+      "venue": "International Conference on Vehicular Electronics and Safety",
+      "citations": 0,
+      "abstract": "In multi-view 3D object detection, achieving good detection performance for small and distant objects in the focus view, like the front, is crucial for self-driving safety. A natural and cost-saving solution is to enhance the image resolution only for the focus view. However, this approach may lead to performance degradation due to the distribution discrepancy caused by multi-resolution inputs. This paper introduces MR-BEV (Bird's-Eye View), a framework for camera BEV-based 3D detection that incorporates a Multi-Resolution Normalization (MRN) layer to regularize the distribution of image features and mitigate the effects of multi-resolution inputs. Additionally, the framework includes a Multi-Resolution Refine Module (MRRM) and a Multi-Resolution Consistency (MRC) loss to further align the image features from different resolutions. Extensive experiments conducted on the nuScenes dataset demonstrate the effectiveness of our proposed methods. The overall NDS (NuScenes Detection Score) is improved by 12.3% (0.342 vs. 0.219) compared to a multi-resolution baseline method. In particular, the front-view NDS is raised by 19.7% for small objects and 22.6% for objects located 30 meters a way. Furthermore, MR-BEV runs 2.03 times faster (53.77 vs. 26.50 FPS, TensorRT-fp32) than the standard pipeline with high-resolution inputs for all views.",
+      "url": "https://www.semanticscholar.org/paper/a719d3c5420f58ecb8d277af15fb692f6a1aa192",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/ICVES61986.2024.10927746",
+      "arxiv_id": ""
+    },
+    {
+      "id": "10.1109/CONECCT52877.2021.9622702",
+      "title": "BEV Detection and Localisation using Semantic Segmentation in Autonomous Car Driving Systems",
+      "authors": [
+        "A. U",
+        "Nachiket Naganure",
+        "S. S."
+      ],
+      "year": 2021,
+      "venue": "IEEE International Conference on Electronics, Computing and Communication Technologies",
+      "citations": 3,
+      "abstract": "In autonomous vehicles, the perception system plays an important role in environment modeling and object detection in 3D space. Existing perception systems use various sensors to localize and track the surrounding obstacles, but have some limitations. Most existing end-to-end autonomous systems are computationally heavy as they are built on multiple deep networks that are trained to detect and localize objects, thus requiring custom, high-end computation devices with high compute power. To address this issue, we propose and experiment with different semantic segmentation-based models for Birds Eye View (BEV) detection and localization of surrounding objects like vehicles and pedestrians from LiDAR (light detection, and ranging) point clouds. Voxelisation techniques are used to transform 3D LiDAR point clouds to 2D RGB images. The semantic segmentation models are trained from the ground up on the Lyft Level 5 dataset. During experimental evaluation, the proposed approach achieved a mean average precision score of 0.044 for UNET, 0.041 for SegNet and 0.033 for FCN, while being significantly less compute-intensive when compared to the state-of-the-art approaches.",
+      "url": "https://www.semanticscholar.org/paper/885871292e27bf19090ce2f24286a1bd96b0202a",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/CONECCT52877.2021.9622702",
+      "arxiv_id": ""
+    },
+    {
+      "id": "10.1109/CAI54212.2023.00031",
+      "title": "Augmenting Vision Queries with RADAR for BEV Detection in Autonomous Driving",
+      "authors": [
+        "Apoorv Singh"
+      ],
+      "year": 2023,
+      "venue": "Conference on Algebraic Informatics",
+      "citations": 0,
+      "abstract": "In order to build an autonomous driving platform at scale, we need to have an affordable sensor stack that provides holistic scene information with just enough information for estimating right depth and semantics of the dynamic scene. Cameras - RADARs came out to be the only combination of the sensor stack to fulfill above two conditions, since LiDARs are too expensive and other sensors like Ultra-sound sensors have extremely short range. However, there is a limited work around radar fused with vision, compared to LiDAR fused with vision work. In this paper we target to fuse RADAR detections to the vision’s object-proposals in the transformers-based state-of-the-art Vision-only networks. Vision-only networks are hypothesized to classify objects very well but they lack behind in depth estimation of the detected objects. In this paper, we hypothesize that adding in radar detections as a query in a transformers decoder along with the pre-learned vision queries from the training data-set can help improving overall recall as well as depth and velocity estimates of the detections.",
+      "url": "https://www.semanticscholar.org/paper/7ec219eb2a20aea8fc4fe54b5b4a26908fae94e3",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/CAI54212.2023.00031",
+      "arxiv_id": ""
+    },
+    {
+      "id": "10.1109/TIP.2025.3526056",
+      "title": "Physically Realizable Adversarial Creating Attack Against Vision-Based BEV Space 3D Object Detection",
+      "authors": [
+        "Jian Wang",
+        "Fan Li",
+        "Song Lv",
+        "Lijun He",
+        "Chao Shen"
+      ],
+      "year": 2025,
+      "venue": "IEEE Transactions on Image Processing",
+      "citations": 39,
+      "abstract": "Vision-based 3D object detection, a cost-effective alternative to LiDAR-based solutions, plays a crucial role in modern autonomous driving systems. Meanwhile, deep models have been proven susceptible to adversarial examples, and attacking detection models can lead to serious driving consequences. Most previous adversarial attacks targeted 2D detectors by placing the patch in a specific region within the object’s bounding box in the image, allowing it to evade detection. However, attacking 3D detector is more difficult because the adversary may be observed from different viewpoints and distances, and there is a lack of effective methods to differentiably render the 3D space poster onto the image. In this paper, we propose a novel attack setting where a carefully crafted adversarial poster (looks like meaningless graffiti) is learned and pasted on the road surface, inducing the vision-based 3D detectors to perceive a non-existent object. We show that even a single 2D poster is sufficient to deceive the 3D detector with the desired attack effect, and the poster is universal, which is effective across various scenes, viewpoints, and distances. To generate the poster, an image-3D applying algorithm is devised to establish the pixel-wise mapping relationship between the image area and the 3D space poster so that the poster can be optimized through standard backpropagation. Moreover, a ground-truth masked optimization strategy is presented to effectively learn the poster without interference from scene objects. Extensive results including real-world experiments validate the effectiveness of our adversarial attack. The transferability and defense strategy are also investigated to comprehensively understand the proposed attack.",
+      "url": "https://www.semanticscholar.org/paper/137c539897bb60fc3821571c67c7eb9bd3e87f20",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/TIP.2025.3526056",
+      "arxiv_id": ""
+    },
+    {
+      "id": "10.1109/TIM.2025.3548792",
+      "title": "MSAFusion: Object Detection Based on Multisensor Adaptive Fusion Under BEV",
+      "authors": [
+        "Mingchen Wang",
+        "Hai Wang",
+        "Yicheng Li",
+        "Long Chen",
+        "Yingfeng Cai",
+        "Zheng Shao"
+      ],
+      "year": 2025,
+      "venue": "IEEE Transactions on Instrumentation and Measurement",
+      "citations": 11,
+      "abstract": "Object detection is a critical component of autonomous driving perception. To achieve comprehensive environmental perception, mainstream methods commonly rely on multimodal sensor fusion. However, existing solutions often face challenges such as low sensor utilization and suboptimal fusion strategies. To address these issues, this article proposes MSAFusion, a multisensor adaptive fusion framework based on a bird’s eye view (BEV). In our framework, we extract multiview features using Vision Mamba (Vim), generate BEV queries through positional encoding for preliminary fusion with multimodal features, and employ a deep Q-network (DQN) for adaptive fusion based on feature consistency and continuity. This approach enables efficient utilization of multimodal sensors and optimal fusion across diverse environments. Extensive experiments on the nuScenes and Radiate datasets demonstrate that MSAFusion achieves state-of-the-art performance, delivering superior panoramic environmental perception, improved object detection accuracy, and enhanced flexibility compared to existing multisensor fusion methods.",
+      "url": "https://www.semanticscholar.org/paper/eb7024fcdc63bc01e1bb0389342bfbcba32c5f57",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/TIM.2025.3548792",
+      "arxiv_id": ""
+    },
+    {
+      "id": "10.1007/s11760-024-03762-5",
+      "title": "SS-BEV: multi-camera BEV object detection based on multi-scale spatial structure understanding",
+      "authors": [
+        "Peicheng Shi",
+        "Yixin Pan",
+        "Aixi Yang"
+      ],
+      "year": 2025,
+      "venue": "Signal, Image and Video Processing",
+      "citations": 4,
+      "abstract": null,
+      "url": "https://www.semanticscholar.org/paper/a1863575ec7107033235ac187f49982d85faf9e6",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1007/s11760-024-03762-5",
+      "arxiv_id": ""
+    },
+    {
+      "id": "2403.11848",
+      "title": "GraphBEV: Towards Robust BEV Feature Alignment for Multi-Modal 3D Object Detection",
+      "authors": [
+        "Ziying Song",
+        "Lei Yang",
+        "Shaoqing Xu",
+        "Lin Liu",
+        "Dongyang Xu",
+        "Caiyan Jia",
+        "Feiyang Jia",
+        "Li Wang"
+      ],
+      "year": 2024,
+      "venue": "European Conference on Computer Vision",
+      "citations": 57,
+      "abstract": "Integrating LiDAR and camera information into Bird's-Eye-View (BEV) representation has emerged as a crucial aspect of 3D object detection in autonomous driving. However, existing methods are susceptible to the inaccurate calibration relationship between LiDAR and the camera sensor. Such inaccuracies result in errors in depth estimation for the camera branch, ultimately causing misalignment between LiDAR and camera BEV features. In this work, we propose a robust fusion framework called Graph BEV. Addressing errors caused by inaccurate point cloud projection, we introduce a Local Align module that employs neighbor-aware depth features via Graph matching. Additionally, we propose a Global Align module to rectify the misalignment between LiDAR and camera BEV features. Our Graph BEV framework achieves state-of-the-art performance, with an mAP of 70.1\\%, surpassing BEV Fusion by 1.6\\% on the nuscenes validation set. Importantly, our Graph BEV outperforms BEV Fusion by 8.3\\% under conditions with misalignment noise.",
+      "url": "https://www.semanticscholar.org/paper/594c8adb9d9ec8312cfadd7c9ae9f0732816e838",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.48550/arXiv.2403.11848",
+      "arxiv_id": "2403.11848"
+    },
+    {
+      "id": "2510.10287",
+      "title": "Bridging Perspectives: Foundation Model Guided BEV Maps for 3D Object Detection and Tracking",
+      "authors": [
+        "Markus Kappeler",
+        "Ozgun cCiccek",
+        "Daniele Cattaneo",
+        "Claudius Glaser",
+        "Yakov Miron",
+        "Abhinav Valada"
+      ],
+      "year": 2025,
+      "venue": "arXiv.org",
+      "citations": 4,
+      "abstract": "Camera-based 3D object detection and tracking are essential for perception in autonomous driving. Current state-of-the-art approaches often rely exclusively on either perspective-view (PV) or bird's-eye-view (BEV) features, limiting their ability to leverage both fine-grained object details and spatially structured scene representations. In this work, we propose DualViewDistill, a hybrid detection and tracking framework that incorporates both PV and BEV camera image features to leverage their complementary strengths. Our approach introduces BEV maps guided by foundation models, leveraging descriptive DINOv2 features that are distilled into BEV representations through a novel distillation process. By integrating PV features with BEV maps enriched with semantic and geometric features from DINOv2, our model leverages this hybrid representation via deformable aggregation to enhance 3D object detection and tracking. Extensive experiments on the nuScenes and Argoverse 2 benchmarks demonstrate that DualViewDistill achieves state-of-the-art performance. The results showcase the potential of foundation model BEV maps to enable more reliable perception for autonomous driving. We make the code and pre-trained models available at https://dualviewdistill.cs.uni-freiburg.de .",
+      "url": "https://www.semanticscholar.org/paper/7602b13455b4d0ec89ff87886a53462565e1cff5",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.48550/arXiv.2510.10287",
+      "arxiv_id": "2510.10287"
+    },
+    {
+      "id": "10.1109/TITS.2025.3589581",
+      "title": "Multi-Modal BEV Enhancement Fusion for 3D Object Detection in Autonomous Driving",
+      "authors": [
+        "Mu Chen",
+        "Mingchuan Yang",
+        "Yuan Zhang",
+        "Tao Han",
+        "Xinchi Li",
+        "Huaici Zhao",
+        "Pengfei Liu"
+      ],
+      "year": 2025,
+      "venue": "IEEE transactions on intelligent transportation systems (Print)",
+      "citations": 4,
+      "abstract": null,
+      "url": "https://www.semanticscholar.org/paper/b3bbe2c20325f836fbe7f80da5fdd482a4716b8c",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/TITS.2025.3589581",
+      "arxiv_id": ""
+    },
+    {
+      "id": "10.1109/ICASSP49660.2025.10889489",
+      "title": "V-Fusion: 2D Detection-enhanced Multimodal 3D BEV Object Detection",
+      "authors": [
+        "Zhenpeng Li",
+        "Xiao Zhao",
+        "Jingwei Bian",
+        "Biao Liu",
+        "Wei Li",
+        "Lihua Zhang"
+      ],
+      "year": 2025,
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citations": 3,
+      "abstract": "Integrating information from multiple sensors enhances the performance of autonomous vehicle perception systems. However, current multimodal 3D object detection methods focus on unifying modalities into a bird’s-eye view (BEV) representation, which overlooks the inherent characteristics of camera perspective view (PV), where 2D detection performance significantly surpasses that of state-of-the-art 3D detectors. In this paper, we propose V-Fusion, a high-quality 2D detection-enhanced multimodal BEV object detection method. By leveraging the 2D priors of PV, we construct 3D query proposals that complement BEV 3D queries. To address the modal discrepancy in generating 3D queries from 2D priors, we propose a depth-robust 2D-to-3D query generation strategy. Additionally, we introduce a novel geometry-constrained self-attention mechanism to enhance the interaction of BEV 3D queries and employ an additional set of learnable 3D queries to account for potentially missed objects. Notably, V-Fusion achieves 74.1 NDS performance on the challenging nuScenes dataset, outperforming SparseFusion in 1.0 NDS and offering comparable inference speed.",
+      "url": "https://www.semanticscholar.org/paper/ed8aca52e3dbf4b2eb6ef85dcedc5e28a91ec3b1",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/ICASSP49660.2025.10889489",
+      "arxiv_id": ""
+    },
+    {
+      "id": "10.1109/OJITS.2025.3543831",
+      "title": "VI-BEV: Vehicle-Infrastructure Collaborative Perception for 3-D Object Detection on Bird’s-Eye View",
+      "authors": [
+        "Jingxiong Meng",
+        "Junfeng Zhao"
+      ],
+      "year": 2025,
+      "venue": "IEEE Open Journal of Intelligent Transportation Systems",
+      "citations": 3,
+      "abstract": "As infrastructure equipment development matures, leveraging these assets to enhance automated vehicle perception becomes increasingly valuable for more accurate and broader 3D object detection. This paper proposes a straightforward and scalable framework to incorporate infrastructure and vehicle onboard sensors to perform 3D object detection on Bird’s Eye View(BEV) images. And a cross-attention based block is involved in utilizing the interacted information among the sensors for sensor information fusion. Our model gets validated on the online V2X-Sim dataset under two scenarios: the short-range case and the long-range case. Our model demonstrates superior accuracy and broader detection capabilities compared to the baseline model from the experiment results.",
+      "url": "https://www.semanticscholar.org/paper/a0787ed30e43e6a5e9cd127df9a417bae57a28ae",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/OJITS.2025.3543831",
+      "arxiv_id": ""
+    },
+    {
+      "id": "2510.24688",
+      "title": "MIC-BEV: Multi-Infrastructure Camera Bird's-Eye-View Transformer with Relation-Aware Fusion for 3D Object Detection",
+      "authors": [
+        "Yun Zhang",
+        "Zhaoliang Zheng",
+        "Johnson Liu",
+        "Zhiyu Huang",
+        "Zewei Zhou",
+        "Zonglin Meng",
+        "Tianhui Cai",
+        "Jiaqi Ma"
+      ],
+      "year": 2025,
+      "venue": "arXiv.org",
+      "citations": 2,
+      "abstract": "Infrastructure-based perception plays a crucial role in intelligent transportation systems, offering global situational awareness and enabling cooperative autonomy. However, existing camera-based detection models often underperform in such scenarios due to challenges such as multi-view infrastructure setup, diverse camera configurations, degraded visual inputs, and various road layouts. We introduce MIC-BEV, a Transformer-based bird's-eye-view (BEV) perception framework for infrastructure-based multi-camera 3D object detection. MIC-BEV flexibly supports a variable number of cameras with heterogeneous intrinsic and extrinsic parameters and demonstrates strong robustness under sensor degradation. The proposed graph-enhanced fusion module in MIC-BEV integrates multi-view image features into the BEV space by exploiting geometric relationships between cameras and BEV cells alongside latent visual cues. To support training and evaluation, we introduce M2I, a synthetic dataset for infrastructure-based object detection, featuring diverse camera configurations, road layouts, and environmental conditions. Extensive experiments on both M2I and the real-world dataset RoScenes demonstrate that MIC-BEV achieves state-of-the-art performance in 3D object detection. It also remains robust under challenging conditions, including extreme weather and sensor degradation. These results highlight the potential of MIC-BEV for real-world deployment. The dataset and source code are available at: https://github.com/HandsomeYun/MIC-BEV.",
+      "url": "https://www.semanticscholar.org/paper/790f1ec2f363d3e002e494336fdda23b97182856",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.48550/arXiv.2510.24688",
+      "arxiv_id": "2510.24688"
+    },
+    {
+      "id": "10.3390/s25134040",
+      "title": "LST-BEV: Generating a Long-Term Spatial–Temporal Bird’s-Eye-View Feature for Multi-View 3D Object Detection",
+      "authors": [
+        "Qijun Feng",
+        "Chunyang Zhao",
+        "Pengfei Liu",
+        "Zhichao Zhang",
+        "Yue Jin",
+        "Wanglin Tian"
+      ],
+      "year": 2025,
+      "venue": "Italian National Conference on Sensors",
+      "citations": 2,
+      "abstract": "This paper presents a novel multi-view 3D object detection framework, Long-Term Spatial–Temporal Bird’s-Eye View (LST-BEV), designed to improve performance in autonomous driving. Traditional 3D detection relies on sensors like LiDAR, but visual perception using multi-camera systems is emerging as a more cost-effective solution. Existing methods struggle with capturing long-range dependencies and cross-task information due to limitations in attention mechanisms. To address this, we propose a Long-Range Cross-Task Detection Head (LRCH) to capture these dependencies and integrate cross-task information for accurate predictions. Additionally, we introduce the Long-Term Temporal Perception Module (LTPM), which efficiently extracts temporal features by combining Mamba and linear attention, overcoming challenges in temporal frame extraction. Experimental results in the nuScenes dataset demonstrate that our proposed LST-BEV outperforms its baseline (SA-BEVPool) by 2.1% mAP and 2.7% NDS, indicating a significant performance improvement.",
+      "url": "https://www.semanticscholar.org/paper/d897b22dd608801f47a50d4432a4655fa102d618",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.3390/s25134040",
+      "arxiv_id": ""
+    },
+    {
+      "id": "10.3390/wevj16090493",
+      "title": "MTC-BEV: Semantic-Guided Temporal and Cross-Modal BEV Feature Fusion for 3D Object Detection",
+      "authors": [
+        "Qiankai Xi",
+        "Li Ma",
+        "Jikai Zhang",
+        "Hongying Bai",
+        "Zhixing Wang"
+      ],
+      "year": 2025,
+      "venue": "World Electric Vehicle Journal",
+      "citations": 1,
+      "abstract": "We propose MTC-BEV, a novel multi-modal 3D object detection framework for autonomous driving that achieves robust and efficient perception by combining spatial, temporal, and semantic cues. MTC-BEV integrates image and LiDAR features in the Bird’s-Eye View (BEV) space, where heterogeneous modalities are aligned and fused through the Bidirectional Cross-Modal Attention Fusion (BCAP) module with positional encodings. To model temporal consistency, the Temporal Fusion (TTFusion) module explicitly compensates for ego-motion and incorporates past BEV features. In addition, a segmentation-guided BEV enhancement projects 2D instance masks into BEV space, highlighting semantically informative regions. Experiments on the nuScenes dataset demonstrate that MTC-BEV achieves a nuScenes Detection Score (NDS) of 72.4% at 14.91 FPS, striking a favorable balance between accuracy and efficiency. These results confirm the effectiveness of the proposed design, highlighting the potential of semantic-guided cross-modal and temporal fusion for robust 3D object detection in autonomous driving.",
+      "url": "https://www.semanticscholar.org/paper/f35030af1e144ce5f8d7efc4fe4c9390f915a0af",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.3390/wevj16090493",
+      "arxiv_id": ""
+    },
+    {
+      "id": "10.1109/TITS.2025.3599015",
+      "title": "HybridBEV: Hybrid Encode and Distillation for Improved BEV 3D Object Detection",
+      "authors": [
+        "Junyi Wang",
+        "Chenghu Du",
+        "Huikai Liu",
+        "Zhenchang Xia",
+        "Bingyi Liu",
+        "Shengwu Xiong"
+      ],
+      "year": 2025,
+      "venue": "IEEE transactions on intelligent transportation systems (Print)",
+      "citations": 1,
+      "abstract": "The development of surround-view cameras is crucial for the advancement of autonomous driving. Utilizing depth information and image features to simulate LiDAR bird’s-eye-view (BEV) features can accomplish efficient 3D object detection tasks. Existing dense BEV generation methods heavily rely on the use of depth features, however, the suboptimal exploitation of these features often results in ambiguity in object location and feature representation during the BEV generation process. To address this, we have designed a hybrid encode and distillation method to enhance 3D object detection performance, termed HybridBEV. Initially, we designed the HybridEncode module, which employs a resampling strategy of depth features in voxel space to obtain BEV features that more accurately reflect the distribution of objects. Subsequently, we introduced multiple distillation methods to supervise the network’s voxel features and BEV feature representations, assisting the student network in learning critical features from the teacher model and ensuring that BEV features can more distinctly represent object distribution. Furthermore, during network training, we loaded pre-trained weights from the teacher network to guide network optimization and accelerate training. Extensive experiments on the nuScenes benchmark demonstrate that HybridBEV can effectively improve the performance of the student network and outperform previous state-of-the-art methods based on surround-view cameras. The code will be published at https://github.com/wjyxx/HybridBEV",
+      "url": "https://www.semanticscholar.org/paper/065f2f54e57fe9c298ce9460e5295996e322681d",
+      "source": "semantic_scholar",
+      "open_access_url": "",
+      "doi": "10.1109/TITS.2025.3599015",
+      "arxiv_id": ""
+    },
+    {
+      "id": "2212.13979",
+      "title": "TiG-BEV: Multi-view BEV 3D Object Detection via Target Inner-Geometry Learning",
+      "authors": [
+        "Peixiang Huang",
+        "Li Liu",
+        "Renrui Zhang",
+        "Song Zhang",
+        "Xinli Xu",
+        "Baichao Wang",
+        "Guoyi Liu"
+      ],
+      "year": 2022,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "To achieve accurate and low-cost 3D object detection, existing methods propose to benefit camera-based multi-view detectors with spatial cues provided by the LiDAR modality, e.g., dense depth supervision and bird-eye-view (BEV) feature distillation. However, they directly conduct point-to-point mimicking from LiDAR to camera, which neglects the inner-geometry of foreground targets and suffers from the modal gap between 2D-3D features. In this paper, we propose the learning scheme of Target Inner-Geometry from the LiDAR modality into camera-based BEV detectors for both dense depth and BEV features, termed as TiG-BEV. First, we introduce an inner-depth supervision module to learn the low-level relative depth relations between different foreground pixels. This enables the camera-based detector to better understand the object-wise spatial structures. Second, we design an inner-feature BEV distillation module to imitate the high-level semantics of different keypoints within foreground targets. To further alleviate the BEV feature gap between two modalities, we adopt both inter-channel and inter-keypoint distillation for feature-similarity modeling. With our target inner-geometry distillation, TiG-BEV can effectively boost BEVDepth by +2.3% NDS and +2.4% mAP, along with BEVDet by +9.1% NDS and +10.3% mAP on nuScenes val set. Code will be available at https://github.com/ADLab3Ds/TiG-BEV.",
+      "url": "http://arxiv.org/abs/2212.13979v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2212.13979v1",
+      "doi": "",
+      "arxiv_id": "2212.13979"
+    },
+    {
+      "id": "2312.12144",
+      "title": "M-BEV: Masked BEV Perception for Robust Autonomous Driving",
+      "authors": [
+        "Siran Chen",
+        "Yue Ma",
+        "Yu Qiao",
+        "Yali Wang"
+      ],
+      "year": 2023,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "3D perception is a critical problem in autonomous driving. Recently, the Bird-Eye-View (BEV) approach has attracted extensive attention, due to low-cost deployment and desirable vision detection capacity. However, the existing models ignore a realistic scenario during the driving procedure, i.e., one or more view cameras may be failed, which largely deteriorates the performance. To tackle this problem, we propose a generic Masked BEV (M-BEV) perception framework, which can effectively improve robustness to this challenging scenario, by random masking and reconstructing camera views in the end-to-end training. More specifically, we develop a novel Masked View Reconstruction (MVR) module for M-BEV. It mimics various missing cases by randomly masking features of different camera views, then leverages the original features of these views as self-supervision, and reconstructs the masked ones with the distinct spatio-temporal context across views. Via such a plug-and-play MVR, our M-BEV is capable of learning the missing views from the resting ones, and thus well generalized for robust view recovery and accurate perception in the testing. We perform extensive experiments on the popular NuScenes benchmark, where our framework can significantly boost 3D perception performance of the state-of-the-art models on various missing view cases, e.g., for the absence of back view, our M-BEV promotes the PETRv2 model with 10.3% mAP gain.",
+      "url": "http://arxiv.org/abs/2312.12144v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2312.12144v1",
+      "doi": "",
+      "arxiv_id": "2312.12144"
+    },
+    {
+      "id": "2310.05989",
+      "title": "QE-BEV: Query Evolution for Bird's Eye View Object Detection in Varied Contexts",
+      "authors": [
+        "Jiawei Yao",
+        "Yingxin Lai",
+        "Hongrui Kou",
+        "Tong Wu",
+        "Ruixi Liu"
+      ],
+      "year": 2023,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "3D object detection plays a pivotal role in autonomous driving and robotics, demanding precise interpretation of Bird's Eye View (BEV) images. The dynamic nature of real-world environments necessitates the use of dynamic query mechanisms in 3D object detection to adaptively capture and process the complex spatio-temporal relationships present in these scenes. However, prior implementations of dynamic queries have often faced difficulties in effectively leveraging these relationships, particularly when it comes to integrating temporal information in a computationally efficient manner. Addressing this limitation, we introduce a framework utilizing dynamic query evolution strategy, harnesses K-means clustering and Top-K attention mechanisms for refined spatio-temporal data processing. By dynamically segmenting the BEV space and prioritizing key features through Top-K attention, our model achieves a real-time, focused analysis of pertinent scene elements. Our extensive evaluation on the nuScenes and Waymo dataset showcases a marked improvement in detection accuracy, setting a new benchmark in the domain of query-based BEV object detection. Our dynamic query evolution strategy has the potential to push the boundaries of current BEV methods with enhanced adaptability and computational efficiency. Project page: https://github.com/Jiawei-Yao0812/QE-BEV",
+      "url": "http://arxiv.org/abs/2310.05989v3",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2310.05989v3",
+      "doi": "",
+      "arxiv_id": "2310.05989"
+    },
+    {
+      "id": "2208.02797",
+      "title": "Vision-Centric BEV Perception: A Survey",
+      "authors": [
+        "Yuexin Ma",
+        "Tai Wang",
+        "Xuyang Bai",
+        "Huitong Yang",
+        "Yuenan Hou",
+        "Yaming Wang",
+        "Yu Qiao",
+        "Ruigang Yang",
+        "Dinesh Manocha",
+        "Xinge Zhu"
+      ],
+      "year": 2022,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "In recent years, vision-centric Bird's Eye View (BEV) perception has garnered significant interest from both industry and academia due to its inherent advantages, such as providing an intuitive representation of the world and being conducive to data fusion. The rapid advancements in deep learning have led to the proposal of numerous methods for addressing vision-centric BEV perception challenges. However, there has been no recent survey encompassing this novel and burgeoning research field. To catalyze future research, this paper presents a comprehensive survey of the latest developments in vision-centric BEV perception and its extensions. It compiles and organizes up-to-date knowledge, offering a systematic review and summary of prevalent algorithms. Additionally, the paper provides in-depth analyses and comparative results on various BEV perception tasks, facilitating the evaluation of future works and sparking new research directions. Furthermore, the paper discusses and shares valuable empirical implementation details to aid in the advancement of related algorithms.",
+      "url": "http://arxiv.org/abs/2208.02797v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2208.02797v2",
+      "doi": "",
+      "arxiv_id": "2208.02797"
+    },
+    {
+      "id": "2306.04939",
+      "title": "UAP-BEV: Uncertainty Aware Planning using Bird's Eye View generated from Surround Monocular Images",
+      "authors": [
+        "Vikrant Dewangan",
+        "Basant Sharma",
+        "Tushar Choudhary",
+        "Sarthak Sharma",
+        "Aakash Aanegola",
+        "Arun K. Singh",
+        "K. Madhava Krishna"
+      ],
+      "year": 2023,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Autonomous driving requires accurate reasoning of the location of objects from raw sensor data. Recent end-to-end learning methods go from raw sensor data to a trajectory output via Bird's Eye View(BEV) segmentation as an interpretable intermediate representation. Motion planning over cost maps generated via Birds Eye View (BEV) segmentation has emerged as a prominent approach in autonomous driving. However, the current approaches have two critical gaps. First, the optimization process is simplistic and involves just evaluating a fixed set of trajectories over the cost map. The trajectory samples are not adapted based on their associated cost values. Second, the existing cost maps do not account for the uncertainty in the cost maps that can arise due to noise in RGB images, and BEV annotations. As a result, these approaches can struggle in challenging scenarios where there is abrupt cut-in, stopping, overtaking, merging, etc from the neighboring vehicles.   In this paper, we propose UAP-BEV: A novel approach that models the noise in Spatio-Temporal BEV predictions to create an uncertainty-aware occupancy grid map. Using queries of the distance to the closest occupied cell, we obtain a sample estimate of the collision probability of the ego-vehicle. Subsequently, our approach uses gradient-free sampling-based optimization to compute low-cost trajectories over the cost map. Importantly, the sampling distribution is adapted based on the optimal cost values of the sampled trajectories. By explicitly modeling probabilistic collision avoidance in the BEV space, our approach is able to outperform the cost-map-based baselines in collision avoidance, route completion, time to completion, and smoothness. To further validate our method, we also show results on the real-world dataset NuScenes, where we report improvements in collision avoidance and smoothness.",
+      "url": "http://arxiv.org/abs/2306.04939v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2306.04939v1",
+      "doi": "",
+      "arxiv_id": "2306.04939"
+    },
+    {
+      "id": "2212.01231",
+      "title": "BEV-SAN: Accurate BEV 3D Object Detection via Slice Attention Networks",
+      "authors": [
+        "Xiaowei Chi",
+        "Jiaming Liu",
+        "Ming Lu",
+        "Rongyu Zhang",
+        "Zhaoqing Wang",
+        "Yandong Guo",
+        "Shanghang Zhang"
+      ],
+      "year": 2022,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Bird's-Eye-View (BEV) 3D Object Detection is a crucial multi-view technique for autonomous driving systems. Recently, plenty of works are proposed, following a similar paradigm consisting of three essential components, i.e., camera feature extraction, BEV feature construction, and task heads. Among the three components, BEV feature construction is BEV-specific compared with 2D tasks. Existing methods aggregate the multi-view camera features to the flattened grid in order to construct the BEV feature. However, flattening the BEV space along the height dimension fails to emphasize the informative features of different heights. For example, the barrier is located at a low height while the truck is located at a high height. In this paper, we propose a novel method named BEV Slice Attention Network (BEV-SAN) for exploiting the intrinsic characteristics of different heights. Instead of flattening the BEV space, we first sample along the height dimension to build the global and local BEV slices. Then, the features of BEV slices are aggregated from the camera features and merged by the attention mechanism. Finally, we fuse the merged local and global BEV features by a transformer to generate the final feature map for task heads. The purpose of local BEV slices is to emphasize informative heights. In order to find them, we further propose a LiDAR-guided sampling strategy to leverage the statistical distribution of LiDAR to determine the heights of local slices. Compared with uniform sampling, LiDAR-guided sampling can determine more informative heights. We conduct detailed experiments to demonstrate the effectiveness of BEV-SAN. Code will be released.",
+      "url": "http://arxiv.org/abs/2212.01231v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2212.01231v1",
+      "doi": "",
+      "arxiv_id": "2212.01231"
+    },
+    {
+      "id": "2212.00623",
+      "title": "BEV-LGKD: A Unified LiDAR-Guided Knowledge Distillation Framework for BEV 3D Object Detection",
+      "authors": [
+        "Jianing Li",
+        "Ming Lu",
+        "Jiaming Liu",
+        "Yandong Guo",
+        "Li Du",
+        "Shanghang Zhang"
+      ],
+      "year": 2022,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Recently, Bird's-Eye-View (BEV) representation has gained increasing attention in multi-view 3D object detection, which has demonstrated promising applications in autonomous driving. Although multi-view camera systems can be deployed at low cost, the lack of depth information makes current approaches adopt large models for good performance. Therefore, it is essential to improve the efficiency of BEV 3D object detection. Knowledge Distillation (KD) is one of the most practical techniques to train efficient yet accurate models. However, BEV KD is still under-explored to the best of our knowledge. Different from image classification tasks, BEV 3D object detection approaches are more complicated and consist of several components. In this paper, we propose a unified framework named BEV-LGKD to transfer the knowledge in the teacher-student manner. However, directly applying the teacher-student paradigm to BEV features fails to achieve satisfying results due to heavy background information in RGB cameras. To solve this problem, we propose to leverage the localization advantage of LiDAR points. Specifically, we transform the LiDAR points to BEV space and generate the foreground mask and view-dependent mask for the teacher-student paradigm. It is to be noted that our method only uses LiDAR points to guide the KD between RGB models. As the quality of depth estimation is crucial for BEV perception, we further introduce depth distillation to our framework. Our unified framework is simple yet effective and achieves a significant performance boost. Code will be released.",
+      "url": "http://arxiv.org/abs/2212.00623v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2212.00623v1",
+      "doi": "",
+      "arxiv_id": "2212.00623"
+    },
+    {
+      "id": "2304.13390",
+      "title": "Group Equivariant BEV for 3D Object Detection",
+      "authors": [
+        "Hongwei Liu",
+        "Jian Yang",
+        "Jianfeng Zhang",
+        "Dongheng Shao",
+        "Jielong Guo",
+        "Shaobo Li",
+        "Xuan Tang",
+        "Xian Wei"
+      ],
+      "year": 2023,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Recently, 3D object detection has attracted significant attention and achieved continuous improvement in real road scenarios. The environmental information is collected from a single sensor or multi-sensor fusion to detect interested objects. However, most of the current 3D object detection approaches focus on developing advanced network architectures to improve the detection precision of the object rather than considering the dynamic driving scenes, where data collected from sensors equipped in the vehicle contain various perturbation features. As a result, existing work cannot still tackle the perturbation issue. In order to solve this problem, we propose a group equivariant bird's eye view network (GeqBevNet) based on the group equivariant theory, which introduces the concept of group equivariant into the BEV fusion object detection network. The group equivariant network is embedded into the fused BEV feature map to facilitate the BEV-level rotational equivariant feature extraction, thus leading to lower average orientation error. In order to demonstrate the effectiveness of the GeqBevNet, the network is verified on the nuScenes validation dataset in which mAOE can be decreased to 0.325. Experimental results demonstrate that GeqBevNet can extract more rotational equivariant features in the 3D object detection of the actual road scene and improve the performance of object orientation prediction.",
+      "url": "http://arxiv.org/abs/2304.13390v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2304.13390v2",
+      "doi": "",
+      "arxiv_id": "2304.13390"
+    },
+    {
+      "id": "2306.04927",
+      "title": "An Efficient Transformer for Simultaneous Learning of BEV and Lane Representations in 3D Lane Detection",
+      "authors": [
+        "Ziye Chen",
+        "Kate Smith-Miles",
+        "Bo Du",
+        "Guoqi Qian",
+        "Mingming Gong"
+      ],
+      "year": 2023,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Accurately detecting lane lines in 3D space is crucial for autonomous driving. Existing methods usually first transform image-view features into bird-eye-view (BEV) by aid of inverse perspective mapping (IPM), and then detect lane lines based on the BEV features. However, IPM ignores the changes in road height, leading to inaccurate view transformations. Additionally, the two separate stages of the process can cause cumulative errors and increased complexity. To address these limitations, we propose an efficient transformer for 3D lane detection. Different from the vanilla transformer, our model contains a decomposed cross-attention mechanism to simultaneously learn lane and BEV representations. The mechanism decomposes the cross-attention between image-view and BEV features into the one between image-view and lane features, and the one between lane and BEV features, both of which are supervised with ground-truth lane lines. Our method obtains 2D and 3D lane predictions by applying the lane features to the image-view and BEV features, respectively. This allows for a more accurate view transformation than IPM-based methods, as the view transformation is learned from data with a supervised cross-attention. Additionally, the cross-attention between lane and BEV features enables them to adjust to each other, resulting in more accurate lane detection than the two separate stages. Finally, the decomposed cross-attention is more efficient than the original one. Experimental results on OpenLane and ONCE-3DLanes demonstrate the state-of-the-art performance of our method.",
+      "url": "http://arxiv.org/abs/2306.04927v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2306.04927v1",
+      "doi": "",
+      "arxiv_id": "2306.04927"
+    },
+    {
+      "id": "2508.20447",
+      "title": "MSMVD: Exploiting Multi-scale Image Features via Multi-scale BEV Features for Multi-view Pedestrian Detection",
+      "authors": [
+        "Taiga Yamane",
+        "Satoshi Suzuki",
+        "Ryo Masumura",
+        "Shota Orihashi",
+        "Tomohiro Tanaka",
+        "Mana Ihori",
+        "Naoki Makishima",
+        "Naotaka Kawata"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Multi-View Pedestrian Detection (MVPD) aims to detect pedestrians in the form of a bird's eye view (BEV) from multi-view images. In MVPD, end-to-end trainable deep learning methods have progressed greatly. However, they often struggle to detect pedestrians with consistently small or large scales in views or with vastly different scales between views. This is because they do not exploit multi-scale image features to generate the BEV feature and detect pedestrians. To overcome this problem, we propose a novel MVPD method, called Multi-Scale Multi-View Detection (MSMVD). MSMVD generates multi-scale BEV features by projecting multi-scale image features extracted from individual views into the BEV space, scale-by-scale. Each of these BEV features inherits the properties of its corresponding scale image features from multiple views. Therefore, these BEV features help the precise detection of pedestrians with consistently small or large scales in views. Then, MSMVD combines information at different scales of multiple views by processing the multi-scale BEV features using a feature pyramid network. This improves the detection of pedestrians with vastly different scales between views. Extensive experiments demonstrate that exploiting multi-scale image features via multi-scale BEV features greatly improves the detection performance, and MSMVD outperforms the previous highest MODA by $4.5$ points on the GMVD dataset.",
+      "url": "http://arxiv.org/abs/2508.20447v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2508.20447v1",
+      "doi": "",
+      "arxiv_id": "2508.20447"
+    },
+    {
+      "id": "2107.10469",
+      "title": "What Makes Sound Event Localization and Detection Difficult? Insights from Error Analysis",
+      "authors": [
+        "Thi Ngoc Tho Nguyen",
+        "Karn N. Watcharasupat",
+        "Zhen Jian Lee",
+        "Ngoc Khanh Nguyen",
+        "Douglas L. Jones",
+        "Woon Seng Gan"
+      ],
+      "year": 2021,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Sound event localization and detection (SELD) is an emerging research topic that aims to unify the tasks of sound event detection and direction-of-arrival estimation. As a result, SELD inherits the challenges of both tasks, such as noise, reverberation, interference, polyphony, and non-stationarity of sound sources. Furthermore, SELD often faces an additional challenge of assigning correct correspondences between the detected sound classes and directions of arrival to multiple overlapping sound events. Previous studies have shown that unknown interferences in reverberant environments often cause major degradation in the performance of SELD systems. To further understand the challenges of the SELD task, we performed a detailed error analysis on two of our SELD systems, which both ranked second in the team category of DCASE SELD Challenge, one in 2020 and one in 2021. Experimental results indicate polyphony as the main challenge in SELD, due to the difficulty in detecting all sound events of interest. In addition, the SELD systems tend to make fewer errors for the polyphonic scenario that is dominant in the training set.",
+      "url": "http://arxiv.org/abs/2107.10469v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2107.10469v2",
+      "doi": "",
+      "arxiv_id": "2107.10469"
+    },
+    {
+      "id": "2211.17126",
+      "title": "BEVUDA: Multi-geometric Space Alignments for Domain Adaptive BEV 3D Object Detection",
+      "authors": [
+        "Jiaming Liu",
+        "Rongyu Zhang",
+        "Xiaoqi Li",
+        "Xiaowei Chi",
+        "Zehui Chen",
+        "Ming Lu",
+        "Yandong Guo",
+        "Shanghang Zhang"
+      ],
+      "year": 2022,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Vision-centric bird-eye-view (BEV) perception has shown promising potential in autonomous driving. Recent works mainly focus on improving efficiency or accuracy but neglect the challenges when facing environment changing, resulting in severe degradation of transfer performance. For BEV perception, we figure out the significant domain gaps existing in typical real-world cross-domain scenarios and comprehensively solve the Domain Adaption (DA) problem for multi-view 3D object detection. Since BEV perception approaches are complicated and contain several components, the domain shift accumulation on multiple geometric spaces (i.e., 2D, 3D Voxel, BEV) makes BEV DA even challenging. In this paper, we propose a Multi-space Alignment Teacher-Student (MATS) framework to ease the domain shift accumulation, which consists of a Depth-Aware Teacher (DAT) and a Geometric-space Aligned Student (GAS) model. DAT tactfully combines target lidar and reliable depth prediction to construct depth-aware information, extracting target domain-specific knowledge in Voxel and BEV feature spaces. It then transfers the sufficient domain knowledge of multiple spaces to the student model. In order to jointly alleviate the domain shift, GAS projects multi-geometric space features to a shared geometric embedding space and decreases data distribution distance between two domains. To verify the effectiveness of our method, we conduct BEV 3D object detection experiments on three cross-domain scenarios and achieve state-of-the-art performance.",
+      "url": "http://arxiv.org/abs/2211.17126v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2211.17126v2",
+      "doi": "",
+      "arxiv_id": "2211.17126"
+    },
+    {
+      "id": "2301.05711",
+      "title": "OA-DET3D: Embedding Object Awareness as a General Plug-in for Multi-Camera 3D Object Detection",
+      "authors": [
+        "Xiaomeng Chu",
+        "Jiajun Deng",
+        "Jianmin Ji",
+        "Yu Zhang",
+        "Houqiang Li",
+        "Yanyong Zhang"
+      ],
+      "year": 2023,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "The recent advance in multi-camera 3D object detection is featured by bird's-eye view (BEV) representation or object queries. However, the ill-posed transformation from image-plane view to 3D space inevitably causes feature clutter and distortion, making the objects blur into the background. To this end, we explore how to incorporate supplementary cues for differentiating objects in the transformed feature representation. Formally, we introduce OA-DET3D, a general plug-in module that improves 3D object detection by bringing object awareness into a variety of existing 3D object detection pipelines. Specifically, OA-DET3D boosts the representation of objects by leveraging object-centric depth information and foreground pseudo points. First, we use object-level supervision from the properties of each 3D bounding box to guide the network in learning the depth distribution. Next, we select foreground pixels using a 2D object detector and project them into 3D space for pseudo-voxel feature encoding. Finally, the object-aware depth features and pseudo-voxel features are incorporated into the BEV representation or query feature from the baseline model with a deformable attention mechanism. We conduct extensive experiments on the nuScenes dataset and Argoverse 2 dataset to validate the merits of OA-DET3D. Our method achieves consistent improvements over the BEV-based baselines in terms of both average precision and comprehensive detection score.",
+      "url": "http://arxiv.org/abs/2301.05711v3",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2301.05711v3",
+      "doi": "",
+      "arxiv_id": "2301.05711"
+    },
+    {
+      "id": "2409.01816",
+      "title": "GeoBEV: Learning Geometric BEV Representation for Multi-view 3D Object Detection",
+      "authors": [
+        "Jinqing Zhang",
+        "Yanan Zhang",
+        "Yunlong Qi",
+        "Zehua Fu",
+        "Qingjie Liu",
+        "Yunhong Wang"
+      ],
+      "year": 2024,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Bird's-Eye-View (BEV) representation has emerged as a mainstream paradigm for multi-view 3D object detection, demonstrating impressive perceptual capabilities. However, existing methods overlook the geometric quality of BEV representation, leaving it in a low-resolution state and failing to restore the authentic geometric information of the scene. In this paper, we identify the drawbacks of previous approaches that limit the geometric quality of BEV representation and propose Radial-Cartesian BEV Sampling (RC-Sampling), which outperforms other feature transformation methods in efficiently generating high-resolution dense BEV representation to restore fine-grained geometric information. Additionally, we design a novel In-Box Label to substitute the traditional depth label generated from the LiDAR points. This label reflects the actual geometric structure of objects rather than just their surfaces, injecting real-world geometric information into the BEV representation. In conjunction with the In-Box Label, Centroid-Aware Inner Loss (CAI Loss) is developed to capture the inner geometric structure of objects. Finally, we integrate the aforementioned modules into a novel multi-view 3D object detector, dubbed GeoBEV, which achieves a state-of-the-art result of 66.2\\% NDS on the nuScenes test set. The code is available at https://github.com/mengtan00/GeoBEV.git.",
+      "url": "http://arxiv.org/abs/2409.01816v2",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2409.01816v2",
+      "doi": "",
+      "arxiv_id": "2409.01816"
+    },
+    {
+      "id": "2107.04937",
+      "title": "BEV-MODNet: Monocular Camera based Bird's Eye View Moving Object Detection for Autonomous Driving",
+      "authors": [
+        "Hazem Rashed",
+        "Mariam Essam",
+        "Maha Mohamed",
+        "Ahmad El Sallab",
+        "Senthil Yogamani"
+      ],
+      "year": 2021,
+      "venue": "arXiv",
+      "citations": 0,
+      "abstract": "Detection of moving objects is a very important task in autonomous driving systems. After the perception phase, motion planning is typically performed in Bird's Eye View (BEV) space. This would require projection of objects detected on the image plane to top view BEV plane. Such a projection is prone to errors due to lack of depth information and noisy mapping in far away areas. CNNs can leverage the global context in the scene to project better. In this work, we explore end-to-end Moving Object Detection (MOD) on the BEV map directly using monocular images as input. To the best of our knowledge, such a dataset does not exist and we create an extended KITTI-raw dataset consisting of 12.9k images with annotations of moving object masks in BEV space for five classes. The dataset is intended to be used for class agnostic motion cue based object detection and classes are provided as meta-data for better tuning. We design and implement a two-stream RGB and optical flow fusion architecture which outputs motion segmentation directly in BEV space. We compare it with inverse perspective mapping of state-of-the-art motion segmentation predictions on the image plane. We observe a significant improvement of 13% in mIoU using the simple baseline implementation. This demonstrates the ability to directly learn motion segmentation output in BEV space. Qualitative results of our baseline and the dataset annotations can be found in https://sites.google.com/view/bev-modnet.",
+      "url": "http://arxiv.org/abs/2107.04937v1",
+      "source": "arxiv",
+      "open_access_url": "https://arxiv.org/pdf/2107.04937v1",
+      "doi": "",
+      "arxiv_id": "2107.04937"
+    }
+  ]
+}
