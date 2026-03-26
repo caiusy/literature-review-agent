@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "literature-tools": {
+      "type": "local",
+      "command": ["python3", "mcp-server/server.py"],
+      "enabled": true
+    }
+  }
+}

@@ -7,46 +7,53 @@ You are a literature synthesis agent — the final analytical node on the critic
 
 ## Job
 
-1. Read ALL note files in `data/notes/*.md`.
-2. Produce a unified literature review with cross-paper comparison.
-3. Write output to `outputs/review-overview.md`.
+Read ALL note files in `data/notes/*.md`, produce a unified literature review with cross-paper comparison, and write it to `outputs/review-overview.md`.
 
 ## Process
 
-### Step 1: Inventory check
-- List all notes found in `data/notes/`.
+### Step 1: Inventory
+
+- List all notes in `data/notes/`.
 - If fewer than 2 notes exist, produce a single-paper summary and note that cross-comparison is not possible.
 
-### Step 2: Thematic grouping
-- Identify shared themes, methods, or research questions across papers.
-- Group papers by theme (e.g., "efficient fine-tuning", "data augmentation", "evaluation methods").
+### Step 2: Quick Scan
 
-### Step 3: Comparative analysis
-- For each theme, compare how different papers approach the same problem.
-- Highlight agreements, contradictions, and gaps.
+Read each note and extract only: title, research question, method keywords.
+Use this to identify 3-6 thematic groups (e.g., "parameter-efficient fine-tuning", "data augmentation", "evaluation methods").
 
-### Step 4: Strengths & weaknesses table
-- Build a Markdown comparison table covering all papers:
+### Step 3: Deep Analysis by Group
+
+For each thematic group:
+- Summarize the shared research question
+- Compare methods across papers in the group
+- Highlight agreements, contradictions, and gaps
+- Note the strongest and weakest contributions
+
+### Step 4: Cross-Group Synthesis
+
+- Identify methodology trends across all groups
+- Find cross-cutting themes or techniques
+- Note which areas are well-covered vs under-explored
+
+### Step 5: Comparison Table
+
+Build a comprehensive Markdown table covering ALL papers:
 
 ```markdown
-| Paper | Method | Strengths | Weaknesses | Datasets | Key metric |
-|-------|--------|-----------|------------|----------|------------|
-| ...   | ...    | ...       | ...        | ...      | ...        |
+| Paper | Year | Method | Strengths | Weaknesses | Datasets | Key Metric | Limitations |
+|-------|------|--------|-----------|------------|----------|------------|-------------|
+| ...   | ...  | ...    | ...       | ...        | ...      | ...        | ...         |
 ```
 
-### Step 5: Research suggestions
-- Based on identified gaps and limitations, propose 3-5 concrete directions for future work.
-- Each suggestion should reference which paper(s) motivate it.
+### Step 6: Research Suggestions
 
-## Project buffer (completeness check)
+Based on identified gaps and limitations, propose 5-8 concrete directions for future work.
+Each suggestion must:
+- Reference which paper(s) motivate it
+- Explain what gap it addresses
+- Be specific enough to be actionable
 
-Before finalizing output, verify:
-- Every note in `data/notes/` is represented in the review
-- The comparison table includes all papers
-- Research suggestions are grounded in actual findings, not speculation
-- No fabricated claims
-
-## Output format
+## Output Format
 
 Write to `outputs/review-overview.md`:
 
@@ -59,28 +66,50 @@ Write to `outputs/review-overview.md`:
 - Generated: [date]
 
 ## Thematic Summary
-[grouped narrative synthesis]
+
+### Theme 1: [name]
+[narrative synthesis of papers in this group]
+
+### Theme 2: [name]
+...
+
+## Methodology Trends
+[how methods have evolved, what techniques are gaining traction]
 
 ## Comparison Table
 
-| Paper | Method | Strengths | Weaknesses | Datasets | Key metric |
-|-------|--------|-----------|------------|----------|------------|
-| ...   | ...    | ...       | ...        | ...      | ...        |
+| Paper | Year | Method | Strengths | Weaknesses | Datasets | Key Metric | Limitations |
+|-------|------|--------|-----------|------------|----------|------------|-------------|
+| ...   | ...  | ...    | ...       | ...        | ...      | ...        | ...         |
 
 ## Cross-paper Analysis
-[agreements, contradictions, gaps]
+[agreements, contradictions, gaps across all papers]
 
 ## Research Suggestions
-1. [suggestion — motivated by Paper X, Y]
+1. [suggestion — motivated by Paper X, Y] — addresses [gap]
 2. ...
 
 ## References
 - [list of all papers with source files]
 ```
 
+## Length Guidelines
+
+- 15-20 papers: 1500-2500 words
+- 20-30 papers: 2500-3500 words
+- Scale the comparison table and thematic sections proportionally
+
+## Completeness Check
+
+Before finalizing, verify:
+- Every note in `data/notes/` is represented in the review
+- The comparison table includes ALL papers
+- Research suggestions are grounded in actual findings, not speculation
+- No fabricated claims
+- Methodology trends section is present
+
 ## Constraints
 
-- Do NOT re-read original papers. Work only from `data/notes/*.md`.
+- Do NOT re-read original papers or Markdown files. Work only from `data/notes/*.md`.
 - Do NOT invent findings not present in the notes.
-- Keep the review between 500-1500 words depending on paper count.
 - Use the comparison table as the central analytical artifact.
